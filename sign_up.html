@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up Page</title>
 </head>
+
 <body>
     <div class="background">
         <div class="gray"></div>
@@ -19,11 +22,9 @@
                 <input type="email" id="email" name="email" placeholder="Enter Email" size="64" maxlength="64" required="required"><br>
 
                 <label for="password">Password</label><br>
-                <input type="password" id="password" name="password" placeholder="Enter Password" pattern=".{8,}" required="required">
-                <div id="visible" onclick="visibility(event)"><img src="images/eye.svg"></div>
-                <p id="errorMsg" class="error">Email or password was incorrect</p>
-                <button class="submit" type="submit">Login</button>
-                <div id="signUp">Not a member?<a href="./sign_up.html"><span>Sign Up</span></a>
+                <input type="password" id="password" name="password" pattern=".{8,}" placeholder="Enter Password" required="required">
+                <button onclick="check(this.form)" class="submit" type="submit">Sign Up</button>
+                <div id="signUp">Already a member?<a href="./index.html"><span>Login</span></a>
             </form>
         </div>
     </div>
