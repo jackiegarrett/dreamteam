@@ -1,0 +1,195 @@
+:root {
+    --Charcoal: #333333;
+    --off-white: #f4f4f4;
+    --Black: #000000;
+    --White: #ffffff;
+    --gray: #999999;
+    --light-gray: #eeeeee;
+    --juicy-red: #ff2f64;
+    --cloud-blue: #87bcde;
+    --sky-blue: #13d3d5;
+    --cobalt: #5087ec;
+    --green: #1dca7f;
+    --royal-purple: #5045ab;
+    --yellow: #ffbf46;
+  }
+
+  html {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+#topNav {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #eeeeee;
+    height: 10vh;
+  }
+
+  #cancel {
+    width: 49px;
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    text-decoration: inherit;
+    letter-spacing: 2px;
+    color: var(--gray);
+  }
+
+  #iconBack {
+    width: 24px;
+    height: 24px;
+    margin-right:8px;
+    object-fit: contain;
+  }
+
+  #chooseCategoryTitle, #moreCategoriesTitle, #setWeeklyBudgetTitle {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--gray);
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  label {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--Charcoal);
+  }
+
+  #rowsOfButtons, #rowsOfButtons2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  #row1, #row2, #row3, #row4 {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #food, #groceries, #bills, #entertainment, #clothing, #pet, #transport, #other {
+    height: 32px;
+  }
+
+  #setWeeklyBudget {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #buttonContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+  }
+
+  button {
+    width: 32px;
+    height: 32px;
+    border-radius: 28px;
+    border: solid 1px #cccccc;
+    background-color: var(--White);
+    outline: none;
+    justify-self: center;
+  }
+
+  button:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button:active {
+    border: 3px solid #cccccc;
+  }
+
+  #submitButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .submitButton {
+    width: 256px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: var(--Charcoal);
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--White);
+    margin-top: 15%;
+  }
+
+
+  input {
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+  }
+
+  .textSize {
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--Charcoal);
+  }
+
+  #moreCategoriesTitle, #rowsOfButtons2, #setWeeklyBudget, #submitButtonContainer {
+      display: none;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+/* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+
+

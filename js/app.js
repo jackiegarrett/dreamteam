@@ -22,3 +22,11 @@ const login = (event) => {
     document.getElementById("errorMsg").style.display = "block";
   }
 };
+
+const unfoldMoreCategories = () => {
+  event.preventDefault();
+  let expandListButton = document.querySelector("button")
+  expandListButton.addEventListener("click", function(event){
+    //first click 
+  });
+}
