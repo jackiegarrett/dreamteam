@@ -81,6 +81,7 @@
     letter-spacing: normal;
     text-align: center;
     color: var(--Charcoal);
+    padding-top: 5px;
   }
 
   #rowsOfButtons, #rowsOfButtons2 {

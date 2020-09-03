@@ -25,23 +25,32 @@ const login = (event) => {
 
 
 
-
-const unfoldMoreCategories = () => {
+const addNewCategory = () => {
   event.preventDefault();
-  document.getElementById("addCategoryToBudgetForm").style.display = "inline";
+  addCategoryToBudgetForm.style.display = "inline";
+  if (addCategoryToBudgetForm.style.display === "inline" && addTransactionForm.style.display === "inline") {
+    addTransactionForm.style.display = "none";}
 }
+
 
 const unfoldTransactionForm = () => {
   event.preventDefault();
-  event.preventDefault();
-  document.getElementById("addTransactionForm").style.display = "inline";
+  addTransactionForm.style.display = "inline";
+  if (addCategoryToBudgetForm.style.display === "inline" && addTransactionForm.style.display === "inline") {
+    addCategoryToBudgetForm.style.display = "none";
+  }
 }
+
+let addTransactionForm = document.getElementById("addTransactionForm");
+let addCategoryToBudgetForm = document.getElementById("addCategoryToBudgetForm");
 
 let expandListButton = document.querySelector("button");
 let foodButton = document.getElementById("food");
 let groceriesButton = document.getElementById("groceries");
 let billsButton = document.getElementById("bills");
 let entertainmentButton = document.getElementById("entertainment");
-expandListButton.addEventListener("click", unfoldMoreCategories);
+
+expandListButton.addEventListener("click", addNewCategory);
+document.getElementById("row1").addEventListener("click", unfoldTransactionForm)
 
 
