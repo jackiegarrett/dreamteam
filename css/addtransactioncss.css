@@ -49,7 +49,7 @@
     object-fit: contain;
   }
 
-  #chooseCategoryTitle, #moreCategoriesTitle, #setWeeklyBudgetTitle {
+  #chooseCategoryTitle, #moreCategoriesTitle, #setWeeklyBudgetTitle, #amountSpentTitle, #moneySpentOnTitle {
     display: flex;
     justify-content: center;
     font-family: Roboto;
@@ -161,6 +161,7 @@
     justify-content: center;
     text-align: center;
     outline: none;
+    width: 100%;
   }
 
   .textSize {
@@ -175,8 +176,8 @@
     color: var(--Charcoal);
   }
 
-  #moreCategoriesTitle, #rowsOfButtons2, #setWeeklyBudget, #submitButtonContainer {
-      display: none;
+  #addCategoryToBudgetForm, #addTransactionForm {
+    display: none;
   }
 
   /* Chrome, Safari, Edge, Opera */

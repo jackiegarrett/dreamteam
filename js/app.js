@@ -23,10 +23,25 @@ const login = (event) => {
   }
 };
 
+
+
+
 const unfoldMoreCategories = () => {
   event.preventDefault();
-  let expandListButton = document.querySelector("button")
-  expandListButton.addEventListener("click", function(event){
-    //first click 
-  });
+  document.getElementById("addCategoryToBudgetForm").style.display = "inline";
 }
+
+const unfoldTransactionForm = () => {
+  event.preventDefault();
+  event.preventDefault();
+  document.getElementById("addTransactionForm").style.display = "inline";
+}
+
+let expandListButton = document.querySelector("button");
+let foodButton = document.getElementById("food");
+let groceriesButton = document.getElementById("groceries");
+let billsButton = document.getElementById("bills");
+let entertainmentButton = document.getElementById("entertainment");
+expandListButton.addEventListener("click", unfoldMoreCategories);
+
+
