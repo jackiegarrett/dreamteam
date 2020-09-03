@@ -14,6 +14,9 @@
     position: absolute;
     margin-top: 70px;
   }
+  .bg3 {
+    display: none;
+  }
   .header {
     display: flex;
     flex-direction: row;
@@ -144,5 +147,25 @@
   }
   .footer {
     position: relative;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-container2 {
+    width: 768px;
+    height: 600px;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    align-items: center;
+  }
+  .gradient-logo {
+    object-fit: contain;
+    position: absolute;
+    margin-left: 325px;
+  }
+  .profile-pic {
+    margin-left: 93%;
   }
 }
