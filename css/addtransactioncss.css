@@ -34,9 +34,6 @@
     margin-left: 0%;
   }
 
-  #navBar {
-    display: none;
-  }
 
   @media screen and (min-width: 768px) {
     #navBar {
@@ -73,6 +70,7 @@
       left: 0;
       padding-top: 10%;
       width: 100%;
+      
     }
   }
 
@@ -145,13 +143,11 @@
     padding-top: 5px;
   }
 
-
-
   #rowsOfButtons, #rowsOfButtons2 {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 
   #row1, #row2, #row3, #row4 {
@@ -165,9 +161,8 @@
     height: 32px;
   }
 
-  #food:active {
-    border: 3px solid var(--light-gray);
-    border-radius: 50%;
+  input[type=image]:active {
+    transform: scale(1.2);
   }
 
   #setWeeklyBudget {
