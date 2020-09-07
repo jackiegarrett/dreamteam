@@ -77,6 +77,7 @@ const sendNewBudget = () => {
     budgetArray[i]["amount"] = amountBudgeted.value;
     };
   console.log(budgetArray);
+  form.reset();
 }
 
 expandListButton.addEventListener("click", unfoldMoreCategoriesForm);
