@@ -5,9 +5,8 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    height: 100%;
+    height: 600px;
     width: 320px;
-    bottom: 0;
   }
   .bg2 {
     width: 320px;
@@ -16,9 +15,6 @@
     margin-top: 70px;
   }
   .bg3 {
-    display: none;
-  }
-  .bg4 {
     display: none;
   }
   .header {
@@ -43,8 +39,6 @@
     width: 32px;
     height: 32px;
     margin-left: 60px;
-    border: 3px solid #5087ec;
-    border-radius: 32px;
   }
   .budget-text {
     font-family: Roboto;
@@ -77,7 +71,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;;
+    height: 150px;
     justify-content: space-between;
     font-family: Roboto;
     font-size: 16px;
@@ -87,17 +81,14 @@
   .food-cat {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
   }
   .groceries-cat {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
   }
   .bills-cat {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
   }
   .entertainment-cat {
     display: flex;
@@ -137,7 +128,6 @@
     position: relative;
     border-radius: 200px;
     margin-left: 60px;
-    background-color: #5087ec;
   }
   .icon {
     width: 32px;
@@ -154,7 +144,6 @@
     left: 75px;
     border: 1px solid black;
     border-radius: 200px;
-    background-color: white;
   }
   .footer {
     position: relative;
@@ -178,148 +167,5 @@
   }
   .profile-pic {
     margin-left: 93%;
-  }
-  .donut {
-    margin: auto;
-    margin: top: 50px;
-  }
-  .bg2 {
-    display: none;
-  }
-  .bg3 {
-    display: flex;
-    position: absolute;
-    margin-top: 75px;
-  }
-  .bottom {
-    width: 100%;
-    height: 32px;
-    font-family: Roboto;
-    font-size: 14px;
-    color: white;
-    position: absolute;
-    margin-top: 125px;
-    margin-left: 18px;
-  }
-  .categories {
-    margin: auto;
-    width: 440px;
-    height: 520px;
-    border-radius: 8px;
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-    border: solid 1px lightgrey;
-    background-color: white;
-  }
-  .food-cat {
-    display: flex;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  .groceries-cat {
-    display: flex;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  .bills-cat {
-    display: flex;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  .entertainment-cat {
-    display: flex;
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  .push {
-    margin-right: 10px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .main-container2 {
-    width: 1024px;
-    height: 600px;  
-  }
-  .bg3 {
-    display: flex;
-    position: absolute;
-    margin-top: 75px;
-  }
-  .bottom {
-    width: 1024px;;
-    height: 32px;
-    font-family: Roboto;
-    font-size: 14px;
-    color: white;
-    position: absolute;
-    margin-top: 125px;
-    margin-left: 18px;
-  }
-  .bg2 {
-    display: none;
-  }
-  .bg3 {
-    display: none;
-  }
-  .bg4 {
-    display: flex;
-    position: absolute;
-    margin-top: 75px;
-  }
-  .categories {
-    width: 768px;
-    height: 296px;
-    border-radius: 8px;
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    margin-left: 127px;
-  }
-  .food-cat {
-    display: flex;
-    margin-left: 500px;
-    margin-right: 30px;
-    height: 74px;
-  }
-  .groceries-cat {
-    display: flex;
-    margin-left: 500px;
-    margin-right: 30px;    
-    height: 74px;
-  }
-  .bills-cat {
-    display: flex;
-    margin-left: 500px;
-    margin-right: 30px;
-    height: 74px;
-  }
-  .entertainment-cat {
-    display: flex;
-    margin-left: 500px;
-    margin-right: 30px;
-    height: 74px;
-  }
-  .donut {
-    margin-right: 450px;
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    position: absolute;
-    margin-left: 150px;
-    margin-top: 45px;
-  }
-  .header {
-    display: flex;
-  }
-  .profile-pic {
-    margin-left: 930px;
-  }
-  .gradient-logo {
-    margin-left: 512px;
-  }
-  .budget {
-    margin-left: 112px;
-  }
-  .budget-text {
-    margin-left: 112px;
   }
 }
