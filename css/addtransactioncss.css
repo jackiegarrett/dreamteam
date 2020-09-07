@@ -34,7 +34,23 @@
     margin-left: 0%;
   }
 
-#topNav {
+  #navBar {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    #navBar {
+      display: flex;
+      justify-content: space-between;
+      top: 0;
+      left: 0;
+      padding-top: 1%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+  #topNav {
     display: flex;
     justify-self: center;
     align-items: center;
@@ -55,7 +71,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      padding-top: 3%;
+      padding-top: 10%;
       width: 100%;
     }
   }
@@ -97,6 +113,12 @@
     padding-bottom: 5%;
   }
 
+  @media screen and (min-width: 768px) {
+    #chooseCategoryTitle, #moreCategoriesTitle, #setWeeklyBudgetTitle, #amountSpentTitle, #moneySpentOnTitle, #cancel {
+      font-size: 14px;
+    }
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -105,8 +127,8 @@
 
   @media screen and (min-width: 768px) {
   form {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
   }
 
@@ -122,6 +144,8 @@
     color: var(--Charcoal);
     padding-top: 5px;
   }
+
+
 
   #rowsOfButtons, #rowsOfButtons2 {
       display: flex;
@@ -139,6 +163,11 @@
 
   #food, #groceries, #bills, #entertainment, #clothing, #pet, #transport, #other {
     height: 32px;
+  }
+
+  #food:active {
+    border: 3px solid var(--light-gray);
+    border-radius: 50%;
   }
 
   #setWeeklyBudget {
@@ -192,6 +221,7 @@
     text-align: center;
     color: var(--White);
     margin-top: 15%;
+    margin-bottom: 10%;
   }
 
 
