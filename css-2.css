@@ -1,0 +1,458 @@
+/* Media Queries */
+/* 320px */
+@media screen and (min-width: 320px) {
+  #buttonContainer {
+    margin-left: 80%;
+    margin-top: 10%;
+  }
+
+  button {
+    padding: 20px;
+    border-radius: 100%;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 0px 40px 0px rgba(80, 135, 236, 0.5);
+    outline: none;
+  }
+
+  button:active {
+    transform: scale(1.4);
+  }
+
+  .main-container2 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100%;
+    width: 80%;
+    bottom: 0;
+  }
+  .bg2 {
+    width: 320px;
+    transform: rotate(-360deg);
+    position: absolute;
+    margin-top: 70px;
+  }
+  .bg3 {
+    display: none;
+  }
+  .bg4 {
+    display: none;
+  }
+  #navBar {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    padding-top: 1%;
+    padding-bottom: 13%;
+  }
+  .menu {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-left: 16px;
+  }
+  .gradient-logo {
+    width: 99px;
+    height: 24px;
+    object-fit: contain;
+    margin-left: 65px;
+  }
+  .profile-pic {
+    width: 32px;
+    height: 32px;
+    margin-left: 60px;
+    border-radius: 32px;
+  }
+  .budget-text {
+    font-family: Roboto;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #888888;
+  }
+  .budget {
+    margin-top: 20px;
+    font-family: Roboto;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #888888;
+  }
+
+  .categories {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-self: center;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-size: 16px;
+    color: #333333;
+  }
+
+  .food-cat {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 8px;
+  }
+
+  .food-cat:active,
+  .food-cat:hover,
+  .groceries-cat:active,
+  .groceries-cat:hover,
+  .bills-cat:active,
+  .bills-cat:hover,
+  .entertainment-cat:active,
+  .entertainment-cat:hover {
+    position: static;
+    background-color: #f4f4f4;
+    padding-right: 5px;
+    border-radius: 5px;
+    align-content: center;
+    padding-right: 3%;
+  }
+
+  .groceries-cat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .bills-cat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .entertainment-cat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .commonCategory {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .push {
+    margin-left: auto;
+  }
+  .color {
+    color: gray;
+  }
+  .number {
+    font-family: Roboto;
+    font-weight: bold;
+    color: black;
+    font-size: 40px;
+  }
+  .bottom {
+    width: 234px;
+    height: 32px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 43px;
+  }
+  .donut {
+    display: flex;
+    justify-self: center;
+    margin-left: 10%;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position: relative;
+    border-radius: 200px;
+    background-color: #5087ec;
+  }
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+  .donut:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    border: 1px solid black;
+    border-radius: 200px;
+    background-color: white;
+  }
+
+  html {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  body {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  #pageWrapper {
+    display: flex;
+    padding-bottom: 35%;
+  }
+
+  #pageWrapper:last-child {
+    margin-right: 0%;
+    margin-left: 0%;
+  }
+
+  .BG {
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #buttonContainer {
+    position: relative;
+    margin-left: 80%;
+    top: -100px;
+  }
+
+  button {
+    transform: scale(1.5);
+  }
+
+  button:active {
+    transform: scale(2);
+  }
+
+  #navBar {
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5%;
+  }
+
+  #pageWrapper {
+    display: flex;
+    padding-bottom: 30%;
+  }
+
+  .main-container2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+  }
+
+  .donut {
+    margin: auto;
+  }
+
+  .bg2 {
+    display: none;
+  }
+  .bg3 {
+    display: flex;
+    position: absolute;
+    margin-top: 75px;
+  }
+  .bottom {
+    width: 100%;
+    height: 32px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    margin-top: 125px;
+    margin-left: 18px;
+  }
+  .categories {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    margin-left: 5%;
+    margin-right: 10%;
+    padding-bottom: 3%;
+    width: 90%;
+    height: 520px;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    border: solid 1px lightgrey;
+    background-color: white;
+  }
+  .food-cat {
+    padding: 3%;
+    display: flex;
+  }
+  .groceries-cat {
+    padding: 3%;
+    display: flex;
+  }
+  .bills-cat {
+    padding: 3%;
+    display: flex;
+  }
+  .entertainment-cat {
+    padding: 3%;
+    display: flex;
+    margin-bottom: 8px;
+  }
+  .commonCategory {
+    padding: 3%;
+    display: flex;
+    margin-bottom: 8px;
+  }
+  .push {
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #navBar {
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .main-container2 {
+    width: 100%;
+  }
+  .bg3 {
+    display: flex;
+    position: absolute;
+    margin-top: 75px;
+  }
+  .bottom {
+    width: 1024px;
+    height: 32px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    margin-top: 125px;
+    margin-left: 18px;
+  }
+  .bg2 {
+    display: none;
+  }
+  .bg3 {
+    display: none;
+  }
+  .bg4 {
+    display: flex;
+    position: absolute;
+    margin-top: 75px;
+  }
+  .categories {
+    justify-self: center;
+    width: 85%;
+    margin-top: 3%;
+    margin-right: 10%;
+    padding-left: 3%;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+  .food-cat {
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30px;
+    margin-top: 4%;
+    height: 74px;
+    margin-bottom: 0;
+  }
+  .groceries-cat {
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30px;
+    height: 74px;
+    margin-bottom: 0;
+  }
+  .bills-cat {
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30px;
+    height: 74px;
+    margin-bottom: 0;
+  }
+  .entertainment-cat {
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30px;
+    height: 74px;
+    margin-bottom: 0px;
+  }
+  .commonCategory {
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30px;
+    height: 74px;
+    margin-bottom: 0px;
+  }
+  .donut {
+    width: 250px;
+    height: 250px;
+    margin-right: 3%;
+    border-radius: 200px;
+    position: absolute;
+    margin-bottom: 5%;
+  }
+
+  .donut:before {
+    content: "";
+    width: 75px;
+    height: 75px;
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 85px;
+    border: 1px solid black;
+    border-radius: 200px;
+    background-color: white;
+  }
+
+  .header {
+    display: flex;
+  }
+  .profile-pic {
+    margin-left: 930px;
+  }
+  .gradient-logo {
+    margin-left: 512px;
+  }
+}

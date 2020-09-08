@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="background">
+        <div class="gray"></div>
+    </div>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" />
+        </div>
+        <div class="form">
+            <form action="#" method="POST" id="loginForm" onsubmit="login(event)">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter Email" size="64" maxlength="64" required="required"><br>
+
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" placeholder="Enter Password" pattern=".{8,}" required="required">
+                <div id="visible" onclick="visibility(event)"><img src="images/eye.svg"></div>
+                <p id="errorMsg" class="error">Email or password was incorrect</p>
+                <button class="submit" type="submit">Login</button>
+                <div id="signUp">Not a member?<a href="./sign_up.html"><span>Sign Up</span></a>
+            </form>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

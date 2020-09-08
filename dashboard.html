@@ -1,57 +1,59 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fundi</title>
-    <link rel="stylesheet" href="./css/css-2.css" />
+    <link rel="stylesheet" href="./css-2.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
   </head>
-
   <body>
-    <div class="main-container2">
-      <div class="header">
-        <img src="./Assets/icon-menu.png" class="menu" />
-        <img src="./Assets/logomark-gradient.png" class="gradient-logo" />
-        <img src="./Assets/profile.png" class="profile-pic" />
-      </div>
-      <div class="budget">
-        <span class="number" id="totalBudgetAvailable">$101.31</span>left
-      </div>
-      <h4 class="budget-text">WEEKLY BUDGET</h4>
-      <div class="donut"></div>
-      <div class="categories" id="categories">
-        <!--<div class="food-cat">
-                <img src="./Assets/foodsvg.svg" class="icon" />Food
-                <span class="push">$34.47/<span class="color">$50</span></span>
-            </div>
-            <div class="groceries-cat">
-                <img src="./Assets/groceriessvg.svg" class="icon" />Groceries
-                <span class="push">$96.80/<span class="color">$100</span></span>
-            </div>
-            <div class="bills-cat">
-                </span><img src="./Assets/billssvg.svg" class="icon" />Bills
-                <span class="push">$103.12/<span class="color">$150</span></span>
-            </div>
-            <div class="entertainment-cat">
-                <img src="./Assets/entertainmentsvg.svg" class="icon" />Entertainment
-                <span class="push">$14.30/<span class="color">$50</span></span>
-            </div>-->
-      </div>
-      <div class="footer">
-        <img src="./Assets/bg-copy.svg" class="bg2" />
-        <img src="./Assets/bg3.svg" class="bg3" />
-        <p class="bottom">
-          Copyright © 2020 Team Dream Team. All rights reserved.
-        </p>
+    <div id="pageWrapper">
+      <div class="main-container2">
+        <div id="navBar">
+          <img src="Assets/icon-menu.svg" />
+          <img src="Assets/logomark-gradient.svg" />
+          <img src="Assets/profilepic.svg" height="38px" width="38px" />
+        </div>
+        <div class="budget">
+          <span class="number" id="totalBudgetAvailable">$101.31</span>left
+        </div>
+        <h4 class="budget-text">WEEKLY BUDGET</h4>
+        <div class="categories" id="categories">
+          <div class="donut"></div>
+          <!-- <div class="food-cat">
+            <img src="Assets/foodsvg.svg" class="icon" />Food
+            <span class="push">$34.47/<span class="color">$50</span></span>
+          </div>
+          <div class="groceries-cat">
+            <img src="Assets/groceriessvg.svg" class="icon"/>Groceries
+            <span class="push">$96.80/<span class="color">$100</span></span>
+          </div>
+          <div class="bills-cat">
+            </span><img src="Assets/billssvg.svg" class="icon"/>Bills
+            <span class="push">$103.12/<span class="color">$150</span></span>
+          </div>
+          <div class="entertainment-cat">
+            <img src="Assets/entertainmentsvg.svg" class="icon"/>Entertainment
+            <span class="push">$14.30/<span class="color">$50</span></span>
+          </div> -->
+        </div>
+        <div id="buttonContainer">
+          <button onclick=""><img src="Assets/icon-add.svg" /></button>
+        </div>
+        <div class="footer">
+          <img src="Assets/bg-copy.svg" class="BG" />
+          <p class="bottom">
+            Copyright © 2020 Team Dream Team. All rights reserved.
+          </p>
+        </div>
       </div>
     </div>
     <script>
       let databasestring = window.localStorage.getItem("budgetAppData");
-
       if (
         databasestring == null ||
         databasestring == undefined ||
@@ -141,10 +143,10 @@
 
         div.appendChild(spanPush);
 
-        div.setAttribute(
-          "onclick",
-          "onCategoryClick('" + entry.category + "')"
-        );
+        // div.setAttribute(
+        //   "onclick",
+        //   "onCategoryClick('" + entry.category + "')"
+        // );
         document.getElementById("categories").appendChild(div);
       });
 

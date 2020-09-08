@@ -15,17 +15,61 @@
 }
 
 html {
-  margin-right: 5%;
-  margin-left: 5%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+#transactionPageWrapper {
+  padding-bottom: 200px;
+}
+
+#transactionPageWrapper:last-child {
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
+@media screen and (min-width: 768px) {
+  #navBar {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    padding-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 #topNav {
   display: flex;
   justify-self: center;
   align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-bottom: 1%;
   border-bottom: 1px solid #eeeeee;
   height: 10vh;
+}
+
+.BG {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .BG {
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-top: 10%;
+    width: 100%;
+  }
 }
 
 #cancel {
@@ -69,10 +113,28 @@ html {
   padding-bottom: 5%;
 }
 
+@media screen and (min-width: 768px) {
+  #chooseCategoryTitle,
+  #moreCategoriesTitle,
+  #setWeeklyBudgetTitle,
+  #amountSpentTitle,
+  #moneySpentOnTitle,
+  #cancel {
+    font-size: 14px;
+  }
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
 }
 
 label {
@@ -115,7 +177,10 @@ label {
 #transport,
 #other {
   height: 32px;
-  cursor: pointer;
+}
+
+input[type="image"]:active {
+  transform: scale(1.2);
 }
 
 #setWeeklyBudget {
@@ -137,6 +202,7 @@ button {
   background-color: var(--White);
   outline: none;
   justify-self: center;
+  cursor: pointer;
 }
 
 button:first-child {
@@ -169,6 +235,7 @@ button:active {
   text-align: center;
   color: var(--White);
   margin-top: 15%;
+  margin-bottom: 10%;
   cursor: pointer;
 }
 
