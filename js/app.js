@@ -148,10 +148,13 @@ document.getElementById("row1").addEventListener("click", unfoldTransactionForm)
 
 const submitData = () => {
   //if category not selected
+  event.preventDefault();
+  console.log("selectedText", selectedText)
   if (selectedText == "" || selectedText == null) {
     alert("select category");
   } else {
     var amount = document.getElementById("amountSpent").value;
+    console.log("amount", amount);
     var budget = document.getElementById("budgetInput").value;
     if (amount && amount >= 0) {
       var dataBaseString = window.localStorage.getItem("budgetAppData");
@@ -175,7 +178,7 @@ const submitData = () => {
           document.getElementById("amountSpent").value = 0;
         }
       } else {
-        var iconNew = document.getElementById(selectedText.toLowerCase());
+        var iconNew = document.getElementById(selectedText.target.value.toLowerCase());
         if (iconNew != null) {
           console.log(iconNew);
           let newCat = {};
