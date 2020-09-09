@@ -148,8 +148,6 @@
     font-size: 40px;
   }
   .bottom {
-    width: 234px;
-    height: 32px;
     font-family: Roboto;
     font-size: 14px;
     font-weight: normal;
@@ -159,13 +157,9 @@
     letter-spacing: normal;
     text-align: center;
     color: white;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 43px;
   }
 
   #donutContainer {
-    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -219,13 +213,14 @@
     margin-left: 0%;
   }
 
+
+
   .BG {
     display: inline;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    
   }
 
 
@@ -277,11 +272,11 @@
   #donutContainer {
     display: flex;
     justify-content: flex-start;
-    margin-top: 15%;
   }
 
   .donut {
     margin: auto;
+    margin-top: 10%;
   }
 
   .bg2 {
@@ -294,7 +289,6 @@
   }
   .bottom {
     width: 100%;
-    height: 32px;
     font-family: Roboto;
     font-size: 14px;
     color: white;
@@ -331,6 +325,7 @@
   .entertainment-cat {
     padding: 3%;
     display: flex;
+    margin-bottom: 10%;
   }
 
   .push {
@@ -338,6 +333,16 @@
   }
 }
 @media screen and (min-width: 1024px) {
+
+  #buttonContainer {
+    position: relative;
+    margin-left: 80%;
+  }
+
+  button {
+    transform: scale(2.2);
+
+  }
 
   #navBar {
     display: flex;
@@ -388,13 +393,13 @@
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    
   }
+
   .food-cat {
     display: flex;
+    margin-top: 3%;
     margin-left: 30%;
     margin-right: 30px;
-    margin-top: 4%;
     height: 74px;
     margin-bottom: 0;
   }
@@ -417,12 +422,13 @@
     margin-left: 30%;
     margin-right: 30px;
     height: 74px;
-    margin-bottom: 0;
   }
+
+
   .donut {
     width: 250px;
     height: 250px;
-    margin-right: 3%;
+    margin-left: 3%;
     border-radius: 200px;
     position: absolute;
     margin-bottom: 5%;

@@ -36,12 +36,13 @@ body {
     justify-content: center;
   }
   .login-container {
-    width: 100%;
+    width: 90%;
+    height: 100%;
     margin-top: 90%;
     margin-left: 10%;
     display: flex;
-    flex-direction: column;
     height: 400px;
+    flex-direction: column;
   }
   .logo {
     display: flex;
@@ -50,8 +51,9 @@ body {
     display: flex;
     object-fit: contain;
     position: absolute;
-    margin-left: 40%;
+    margin-left: 35%;
     margin-top: 35%;
+    width: 30%;
   }
   .BG {
     margin: 0;
@@ -62,7 +64,7 @@ body {
     width: 100%;
   }
   .email {
-    width: 39px;
+    width: 30%;
     height: 14px;
     font-family: Roboto;
     font-size: 12px;
@@ -74,7 +76,7 @@ body {
     color: #333333;
   }
   .password {
-    width: 67px;
+    width: 30%;
     height: 14px;
     font-family: Roboto;
     font-size: 12px;
@@ -87,7 +89,7 @@ body {
     padding-top: 5px;
   }
   .rectangle {
-    width: 256px;
+    width: 90%;
     height: 40px;
     border-radius: 4px;
     border-style: none;
@@ -96,7 +98,7 @@ body {
     background-color: rgba(135, 188, 222, 0.25);
   }
   .submit {
-    width: 256px;
+    width: 90%;
     height: 48px;
     border-radius: 24px;
     font-family: Roboto;
@@ -107,7 +109,9 @@ body {
     border-style: none;
   }
   .create-account {
-    width: 97px;
+    display: flex;
+    width: 90%;
+    margin-left: 35%;
     height: 16px;
     font-family: Roboto;
     font-size: 14px;
@@ -118,46 +122,28 @@ body {
     letter-spacing: normal;
     text-align: center;
     color: #333333;
-    margin-left: 30%;
     margin-top: 15px;
   }
 }
 
 /* 768px */
 @media screen and (min-width: 768px) {
-.main-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-  }
-.logo {
-  position: relative;
-  display: flex;
-}
 .group-2 {
-  width: 112px;
-  height: 41px;
+  display: flex;
   object-fit: contain;
   position: absolute;
-  margin-left: 325px;
-  margin-top: 175px;
+  margin-left: -15%;
+  margin-top: 15%;
+  width: 30%;
 }
-.BG {
-  width: 768px;
-  height: 500px;
-  object-fit: contain;
-  position: absolute;
-  
-}
+
 .login-container {
-  height: 330px;
-  width: 400px;
+  width: 50%;
+  margin-left: 0;
   border-radius: 8px;
   box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.5);
   background-color: white;
   position: absolute;
-  margin-left: 200px;
   margin-top: 300px;
   padding-top: 0px;
 }
@@ -190,16 +176,17 @@ body {
     margin-left: 32px;
   }
 .rectangle {
-    width: 336px;
-    height: 40px;
-    border-radius: 4px;
-    border-style: none;
-    margin-bottom: 5px;
-    margin-left: 32px;
-    background-color: rgba(135, 188, 222, 0.25);
+  width: 90%;
+  margin-left: 5%;
+  height: 40px;
+  border-radius: 4px;
+  border-style: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgba(135, 188, 222, 0.25);
   }
   .submit {
-    width: 336px;
+    width: 90%;
     height: 48px;
     border-radius: 24px;
     font-family: Roboto;
@@ -208,35 +195,57 @@ body {
     margin-top: 25px;
     color: white;
     border-style: none;
-    margin-left: 32px;
+    margin-left: 5%;
   }
   .create-account {
-    width: 97px;
-    height: 16px;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #333333;
-    margin-left: 38%;
-    margin-top: 15px;
+    margin-left: 40%;
   }
-/* 1024px */
+
+  @media screen and (min-width: 1024px) {
+    body {
+      overflow: hidden;
+    }
+    
+    .email {
+      transform: scale(1.3);
+      margin-left: 6%;
+    }
+
+    .password {
+      transform: scale(1.3);
+      margin-left: 6%;
+    }
+
+    .create-account {
+      margin-left: 44%;
+    }
+
+    .group-2 {
+      display: flex;
+      object-fit: contain;
+      position: absolute;
+      margin-top: 100px;
+      margin-left: -10%;
+      width: 300px;
+    }
+  }
+
+
+/*
 @media screen and (min-width: 1024px) {
     .main-container {
         display: flex;
         flex-direction: column;
-        width: 1024px;
-        height: 720px;
         margin: auto;
+        top: 0;
+        left: 0;
+        height: 0px;
       }
     .logo {
+      top: 0;
       position: relative;
       display: flex;
+      width: 100%;
     }
     .group-2 {
       width: 112px;
@@ -247,8 +256,6 @@ body {
       margin-top: 95px;
     }
     .BG {
-      width: 1024px;
-      height: 720px;
       object-fit: contain;
       position: absolute;
       
@@ -330,3 +337,4 @@ body {
       }
     }
   }
+  */
