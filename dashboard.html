@@ -14,7 +14,6 @@
     <div id="pageWrapper">
       <div class="main-container2">
         <div id="navBar">
-<<<<<<< HEAD
           <img src="Assets/icon-menu.svg">
           <img src="Assets/logomark-gradient.svg">
           <img src="Assets/profilepic.svg" height="38px" width="38px">
@@ -27,19 +26,6 @@
             <!-- <canvas id="myCanvas"></canvas> -->
           </div>
           <div class="food-cat">
-=======
-          <img src="Assets/icon-menu.svg" />
-          <img src="Assets/logomark-gradient.svg" />
-          <img src="Assets/profilepic.svg" height="38px" width="38px" />
-        </div>
-        <div class="budget">
-          <span class="number" id="totalBudgetAvailable">$101.31</span>left
-        </div>
-        <h4 class="budget-text">WEEKLY BUDGET</h4>
-        <div class="categories" id="categories">
-          <div class="donut"></div>
-          <!-- <div class="food-cat">
->>>>>>> Rais-Branch
             <img src="Assets/foodsvg.svg" class="icon" />Food
             <span class="push">$34.47/<span class="color">$50</span></span>
           </div>
@@ -54,7 +40,6 @@
           <div class="entertainment-cat">
             <img src="Assets/entertainmentsvg.svg" class="icon"/>Entertainment
             <span class="push">$14.30/<span class="color">$50</span></span>
-<<<<<<< HEAD
           </div>
         </div>
         <div id="buttonContainer">
@@ -69,133 +54,5 @@
       </div>
     </div>
     <script src="js/app.js"></script>
-=======
-          </div> -->
-        </div>
-        <div id="buttonContainer">
-          <button onclick=""><img src="Assets/icon-add.svg" /></button>
-        </div>
-        <div class="footer">
-          <img src="Assets/bg-copy.svg" class="BG" />
-          <p class="bottom">
-            Copyright © 2020 Team Dream Team. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </div>
-    <script>
-      let databasestring = window.localStorage.getItem("budgetAppData");
-      if (
-        databasestring == null ||
-        databasestring == undefined ||
-        databasestring == ""
-      ) {
-        var seedData = {
-          TotalBudget: 350,
-          listofCategory: [
-            {
-              category: "Food",
-              used: 0,
-              budget: 50,
-              class: "food-cat",
-              src: "./Assets/foodsvg.svg",
-            },
-            {
-              category: "Groceries",
-              used: 0,
-              budget: 100,
-              class: "groceries-cat",
-              src: "./Assets/groceriessvg.svg",
-            },
-            {
-              category: "Bills",
-              used: 0,
-              budget: 150,
-              class: "bills-cat",
-              src: "./Assets/billssvg.svg",
-            },
-            {
-              category: "Entertainment",
-              used: 0,
-              budget: 50,
-              class: "entertainment-cat",
-              src: "./Assets/entertainmentsvg.svg",
-            },
-          ],
-        };
-        window.localStorage.setItem("budgetAppData", JSON.stringify(seedData));
-        databasestring = window.localStorage.getItem("budgetAppData");
-      }
-
-      let database = JSON.parse(databasestring);
-      let totalUsed = 0;
-      let totalBudget = 0;
-
-      database.listofCategory.forEach(function (entry) {
-        console.log(entry);
-        var used = parseFloat(entry.used) || 0;
-        var budget = parseFloat(entry.budget) || 0;
-        totalUsed += used;
-        totalBudget += budget;
-
-        let div = document.createElement("div");
-        div.classList.add(entry.class);
-        let img = document.createElement("img");
-        img.src = entry.src;
-        img.classList.add("icon");
-        div.appendChild(img);
-
-        var container = document.createElement("span");
-        var categoryText = document.createTextNode(entry.category);
-
-        if (used >= budget) {
-          container.style.color = "red";
-        }
-        container.appendChild(categoryText);
-        div.appendChild(container);
-
-        let spanColor = document.createElement("span");
-        spanColor.classList.add("color");
-
-        let spanPush = document.createElement("span");
-        spanPush.classList.add("push");
-
-        spanColor.innerHTML = entry.budget;
-        var budgetText = document.createTextNode(
-          "$" + entry.used.toFixed(2) + "/"
-        );
-
-        if (used >= budget) {
-          spanPush.style.color = "red";
-          spanColor.style.color = "red";
-        }
-        spanPush.appendChild(budgetText);
-        spanPush.appendChild(spanColor);
-
-        div.appendChild(spanPush);
-
-        // div.setAttribute(
-        //   "onclick",
-        //   "onCategoryClick('" + entry.category + "')"
-        // );
-        document.getElementById("categories").appendChild(div);
-      });
-
-      //   //  delete function
-      //   var onCategoryClick = function (categoryName) {
-      //     console.log(categoryName);
-      //     databasestring = window.localStorage.getItem("budgetAppData");
-      //     let database = JSON.parse(databasestring);
-      //     var clickedCategoryIndex = database.listofCategory.findIndex(
-      //       (x) => x.category == categoryName
-      //     );
-      //     console.log(clickedCategoryIndex);
-      //   };
-
-      //   budget left
-      document.getElementById("totalBudgetAvailable").innerHTML =
-        "$" + (totalBudget - totalUsed).toFixed(2);
-    </script>
->>>>>>> Rais-Branch
   </body>
 </html>
