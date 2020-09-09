@@ -26,8 +26,18 @@ body {
 input {
   font-family: Roboto;
   font-size: 16px;
-  color: grey;
+  color: #000;
+  outline: none;
 }
+
+#errorMsg {
+  display: none;
+  display: flex;
+  justify-content: center;
+  color: #ff2f64;
+}
+
+
 /* Media Queries */
 /* 320px */
 @media screen and (min-width: 320px) {
@@ -80,8 +90,22 @@ input {
     letter-spacing: 1.71px;
     color: #333333;
   }
+
+  #passwordContainer {
+    display: flex;
+    display: row;
+    width: 100%;
+  }
+
+  #visible {
+    width: 30px;
+    height: 30px;
+    margin-left: -10%;
+    margin-top: 2%;
+    filter: invert(38%) sepia(0%) saturate(1%) hue-rotate(151deg) brightness(98%) contrast(77%);
+  }
+
   .password {
-    width: 30%;
     height: 14px;
     font-family: Roboto;
     font-size: 12px;
@@ -115,6 +139,12 @@ input {
     color: white;
     border-style: none;
   }
+
+  .submit:active {
+    background-color: rgb(31, 34, 34);
+    outline: none;
+  }
+  
   .create-account {
     display: flex;
     width: 90%;
@@ -144,6 +174,7 @@ input {
   width: 30%;
 }
 
+
 .login-container {
   width: 50%;
   margin-left: 0;
@@ -154,6 +185,15 @@ input {
   margin-top: 300px;
   padding-top: 0px;
 }
+
+form {
+  margin-top: 5%;
+}
+
+input[type="submit"] {
+  margin-top: 0;
+}
+
 .email {
     width: 39px;
     height: 14px;
@@ -211,6 +251,16 @@ input {
   }
 
   @media screen and (min-width: 1024px) {
+
+    #visible {
+      display: flex;
+      margin-left: -13%;
+      margin-top: 1.5%;
+      width: 30px;
+      height: 30px;
+
+    }
+
     body {
       overflow: hidden;
     }
@@ -239,7 +289,8 @@ input {
       position: relative;
       margin-top: 60%;
       margin-left: 2%;
-      width: 300px;
+      width: 280px;
+    }
     }
   }
 }
