@@ -23,39 +23,39 @@ const login = (event) => {
   }
 };
 
-let form = document.querySelector("form");
-let amountSpent = document.getElementById("amountSpent");
-let addTransactionForm = document.getElementById("addTransactionForm");
-let balanceArray = [];
+// let form = document.querySelector("form");
+// let amountSpent = document.getElementById("amountSpent");
+// let addTransactionForm = document.getElementById("addTransactionForm");
+// let balanceArray = [];
 
-let amountBudgeted = document.getElementById("budgetInput");
-let addCategoryToBudgetForm = document.getElementById("addCategoryToBudgetForm");
-let expandListButton = document.querySelector("button");
-let budgetArray = [];
+// let amountBudgeted = document.getElementById("budgetInput");
+// let addCategoryToBudgetForm = document.getElementById("addCategoryToBudgetForm");
+// let expandListButton = document.querySelector("button");
+// let budgetArray = [];
 
-const unfoldTransactionForm = (event) => {
-  event.preventDefault();
-  balanceArray.push({
-    category:event.target.id
-  })
-  addTransactionForm.style.display = "inline";
-  if (addCategoryToBudgetForm.style.display === "inline" && addTransactionForm.style.display === "inline") {
-    addCategoryToBudgetForm.style.display = "none";
-  }
-}
+// const unfoldTransactionForm = (event) => {
+//   event.preventDefault();
+//   balanceArray.push({
+//     category:event.target.id
+//   })
+//   addTransactionForm.style.display = "inline";
+//   if (addCategoryToBudgetForm.style.display === "inline" && addTransactionForm.style.display === "inline") {
+//     addCategoryToBudgetForm.style.display = "none";
+//   }
+// }
 
-//Each time I enter a new transaction, the value in all objects is updated to equal the most recent one. 
-const sendNewTransaction = () => {
-  event.preventDefault();
-  for (i = 0; i < balanceArray.length; i++) {
-  balanceArray[i]["amount"] = amountSpent.value;
-  }
-  console.log(balanceArray);
-  //Form doesn't clear automatically
-  form.reset();
-  }
+// //Each time I enter a new transaction, the value in all objects is updated to equal the most recent one.
+// const sendNewTransaction = () => {
+//   event.preventDefault();
+//   for (i = 0; i < balanceArray.length; i++) {
+//   balanceArray[i]["amount"] = amountSpent.value;
+//   }
+//   console.log(balanceArray);
+//   //Form doesn't clear automatically
+//   form.reset();
+//   }
 
-//Submit button needs sendBudget + addBudgetCategory needs to separate
+// //Submit button needs sendBudget + addBudgetCategory needs to separate
 
 const unfoldMoreCategoriesForm = () => {
   event.preventDefault();
@@ -64,121 +64,140 @@ const unfoldMoreCategoriesForm = () => {
     addTransactionForm.style.display = "none";}
 }
 
-const addBudgetCategory = (event) => {
-  event.preventDefault();
-  budgetArray.push({
-    category:event.target.id
-  });
-}
+// const addBudgetCategory = (event) => {
+//   event.preventDefault();
+//   budgetArray.push({
+//     category:event.target.id
+//   });
+// }
 
-const sendNewBudget = () => {
-  event.preventDefault();
-  for (i = 0; i < budgetArray.length; i++) {
-    budgetArray[i]["amount"] = amountBudgeted.value;
-    };
-  console.log(budgetArray);
-  form.reset();
-}
+// const sendNewBudget = () => {
+//   event.preventDefault();
+//   for (i = 0; i < budgetArray.length; i++) {
+//     budgetArray[i]["amount"] = amountBudgeted.value;
+//     };
+//   console.log(budgetArray);
+//   form.reset();
+// }
 
-window.onload = () => {
-const drawPieSlice = (
-  ctx,
-  centerX,
-  centerY,
-  radius,
-  startAngle,
-  endAngle,
-  color
-) => {
-  ctx.fillStyle = color;
-  ctx.beginPath();
-  ctx.moveTo(centerX, centerY);
-  ctx.arc(centerX, centerY, radius, startAngle, endAngle);
-  ctx.closePath();
-  ctx.fill();
-};
-var myVinyls = {
-  "transport": 20,
-  "Groceries": 20,
-  "Bills": 20,
-  "Entertainment": 20,
-  "Food": 20,
-};
-let balanceArray = {
-  "groceries": [
-    {
-      amount: '50'
-    },
-    {
-      amount: '5'
-    },
-    {
-      amount: '50'
-    }
-  ],
-  "bills": [
-    {
-      amount: '50'
-    },
-    {
-      amount: '5'
-    },
-  ]
-}
-// groceries budget = 200 - 105 = 95
-// bills budget = 100 - 55 =
-const pieChart = (options) => {
-  let canvas = options.canvas;
-  let ctx = canvas.getContext("2d");
-  let colors = options.colors;
-  console.log('canvas', canvas.width / 2)
-  var total_value = 0;
-  var color_index = 0;
-  for (var categ in options.data) {
-    var val = options.data[categ];
-    total_value += val;
-  }
-  var start_angle = 0;
-  for (categ in options.data) {
-    val = options.data[categ];
-    let slice_angle = (2 * Math.PI * val) / total_value;
-    drawPieSlice(
-      ctx,
-      canvas.width / 2,
-      canvas.height / 2,
-      Math.min(canvas.width / 2, canvas.height / 2),
-      start_angle,
-      start_angle + slice_angle,
-      colors[color_index % colors.length]
-    );
-    start_angle += slice_angle;
-    color_index++;
-  }
-};
-const drawIt = () => {
-  pieChart({
-    canvas: document.getElementById("myCanvas"),
-    data: myVinyls,
-    colors: ["#ff0000","#fde23e", "#f16e23", "#57d9ff", "#937e88"],
-  });
-};
-}
-
-
-expandListButton.addEventListener("click", unfoldMoreCategoriesForm);
-
-// Overlay/Modal hidden until list item is clicked
-document.querySelectorAll('.category').addEventListener('click', function() {
-  document.querySelector('.dark-overlay').style.display = 'block';
-});
-
-
-// Cancel dismisses Overlay/Modal
-document.querySelector('#remove-button-cancel').addEventListener('click', function() {
-  document.querySelector('.dark-overlay').style.display = 'none';
-});
-
-
-// When list item is clicked,
 
 //On submit, category and weekly budget get input get logged to dashboard && icon gets added to the top list in a new row above the button to be viewed on default during next  || OR on submit, transaction amount spent gets logged to appropriate pre-existing category on dashboard
+
+const addNewCategory = () => {
+  event.preventDefault();
+  addCategoryToBudgetForm.style.display = "inline";
+  if (
+    addCategoryToBudgetForm.style.display === "inline" &&
+    addTransactionForm.style.display === "inline"
+  ) {
+    addTransactionForm.style.display = "none";
+  }
+};
+
+var selectedText = "";
+
+//when user selects category
+const unfoldTransactionForm = (selectedCategory) => {
+  event.preventDefault();
+  addTransactionForm.style.display = "inline";
+  if (addCategoryToBudgetForm.style.display === "inline" && addTransactionForm.style.display === "inline") {
+     addCategoryToBudgetForm.style.display = "none";
+  }
+  console.log(selectedCategory);
+  selectedText = selectedCategory;
+  var dataBaseString = window.localStorage.getItem("budgetAppData");
+  let database = JSON.parse(dataBaseString);
+  var exist = database.listofCategory.findIndex(
+    (x) => x.category == selectedText
+  );
+  if (exist != -1) {
+    document.getElementById("budgetInput").value =
+      database.listofCategory[exist].budget;
+  } else {
+    document.getElementById("budgetInput").value = 0;
+  }
+};
+// calling unfoldTransactionForm function when user clicks add new category
+const AddNewCategory = (selectedCategory) => {
+  event.preventDefault();
+  addTransactionForm.style.display = "inline";
+  console.log(selectedCategory);
+  selectedText = selectedCategory;
+  unfoldTransactionForm(selectedCategory);
+};
+
+let addTransactionForm = document.getElementById("addTransactionForm");
+let addCategoryToBudgetForm = document.getElementById(
+  "addCategoryToBudgetForm"
+);
+
+let expandListButton = document.querySelector("button");
+let foodButton = document.getElementById("food");
+let groceriesButton = document.getElementById("groceries");
+let billsButton = document.getElementById("bills");
+let entertainmentButton = document.getElementById("entertainment");
+
+expandListButton.addEventListener("click", addNewCategory);
+document.getElementById("row1").addEventListener("click", unfoldTransactionForm)
+
+const submitData = () => {
+  //if category not selected
+  if (selectedText == "" || selectedText == null) {
+    alert("select category");
+  } else {
+    var amount = document.getElementById("amountSpent").value;
+    var budget = document.getElementById("budgetInput").value;
+    if (amount && amount >= 0) {
+      var dataBaseString = window.localStorage.getItem("budgetAppData");
+      let database = JSON.parse(dataBaseString);
+      var exist = database.listofCategory.findIndex(
+        (x) => x.category == selectedText
+      );
+      if (exist != -1) {
+        var num1 = parseFloat(database.listofCategory[exist].used) || 0;
+        var num2 = parseFloat(amount) || 0;
+        var floatBudget = parseFloat(budget) || 0;
+        if (num1 + num2 > floatBudget) {
+          alert("Out of budget");
+        } else {
+          database.listofCategory[exist].used = num1 + num2;
+          database.listofCategory[exist].budget = floatBudget;
+          window.localStorage.setItem(
+            "budgetAppData",
+            JSON.stringify(database)
+          );
+          document.getElementById("amountSpent").value = 0;
+        }
+      } else {
+        var iconNew = document.getElementById(selectedText.toLowerCase());
+        if (iconNew != null) {
+          console.log(iconNew);
+          let newCat = {};
+          newCat.budget =
+            parseFloat(document.getElementById("budgetInput").value) || 0;
+          newCat.category = selectedText;
+          //common class added in css
+          newCat.class = "commonCategory";
+          newCat.src = iconNew.getAttribute("src");
+          newCat.used =
+            parseFloat(document.getElementById("amountSpent").value) || 0;
+          if (newCat.used > newCat.budget) {
+            alert("out of budget");
+            return;
+          }
+          console.log(newCat);
+          database.listofCategory.push(newCat);
+          window.localStorage.setItem(
+            "budgetAppData",
+            JSON.stringify(database)
+          );
+          document.getElementById("budgetInput").value = 0;
+        } else {
+          alert("Invalid Category");
+        }
+      }
+    } else {
+      alert("Enter Amount");
+    }
+  }
+};

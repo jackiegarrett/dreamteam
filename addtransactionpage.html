@@ -50,19 +50,19 @@
 
                 <div id="rowsOfButtons2">
                     <div id="row1">
-                        <input type="image" src="Assets/clothingsvg.svg" id="clothing" name="selectCategory" value="Clothing" onclick="addBudgetCategory(event)">
+                        <input type="image" src="Assets/clothingsvg.svg" id="clothing" name="selectCategory" value="Clothing" onclick="AddNewCategory('Clothing'); addBudgetCategory(event)">
                         <label for="Clothing">Clothing</label>
                     </div>
                     <div id="row2">
-                        <input type="image" src="Assets/petsvg.svg" id="pet" name="selectCategory" value="Pet" onclick="addBudgetCategory(event)">
+                        <input type="image" src="Assets/petsvg.svg" id="pet" name="selectCategory" value="Pet" onclick="AddNewCategory('Pet'); addBudgetCategory(event)">
                         <label for="Pet">Pet</label>
                     </div>
                     <div id="row3">
-                        <input type="image" src="Assets/transportsvg.svg" id="transport" name="selectCategory" value="Transport" onclick="addBudgetCategory(event)">
+                        <input type="image" src="Assets/transportsvg.svg" id="transport" name="selectCategory" value="Transport" onclick="AddNewCategory('Transport'); addBudgetCategory(event)">
                         <label for="Transport">Transport</label>
                     </div>
                     <div id="row4">
-                        <input type="image" src="Assets/othersvg.svg" id="other" name="selectCategory" value="Other" onclick="addBudgetCategory(event)">
+                        <input type="image" src="Assets/othersvg.svg" id="other" name="selectCategory" value="Other" onclick="AddNewCategory('Other'); addBudgetCategory(event)">
                         <label for="Other">Other</label>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <input type="number" id="budgetInput" name="selectCategory" placeholder="" class="textSize" maxlength="6">
                 </div>
                 <div id="submitButtonContainer">
-                    <input type="submit" id="submitButtonCategory" name="selectCategory" class="submitButton" onclick="sendNewBudget(event)">
+                    <input type="submit" id="submitButtonCategory" name="selectCategory" class="submitButton" onclick="submitData(); sendNewBudget(event)">
                 </div>
             </div>
         </form>
@@ -86,7 +86,7 @@
                 <input type="number" id="amountSpent" name="amountSpentNumber" placeholder="" class="textSize">
 
                 <div id="submitButtonContainer">
-                    <input type="submit" id="submitButtonTransaction" name="selectCategory" class="submitButton" onclick="sendNewTransaction()">
+                    <input type="submit" id="submitButtonTransaction" name="selectCategory" class="submitButton" onclick="submitData(); sendNewTransaction()">
                 </div>
             </div>
         </form>
