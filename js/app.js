@@ -31,7 +31,7 @@ const login = (event) => {
 // let amountBudgeted = document.getElementById("budgetInput");
 // let addCategoryToBudgetForm = document.getElementById("addCategoryToBudgetForm");
 // let expandListButton = document.querySelector("button");
-// let budgetArray = [];
+let budgetArray = [];
 
 // const unfoldTransactionForm = (event) => {
 //   event.preventDefault();
@@ -72,14 +72,15 @@ const unfoldMoreCategoriesForm = () => {
 //   });
 // }
 
-// const sendNewBudget = () => {
-//   event.preventDefault();
-//   for (i = 0; i < budgetArray.length; i++) {
-//     budgetArray[i]["amount"] = amountBudgeted.value;
-//     };
-//   console.log(budgetArray);
-//   // form.reset();
-// }
+const sendNewBudget = () => {
+  event.preventDefault();
+  for (i = 0; i < budgetArray.length; i++) {
+    budgetArray[i]["amount"] = amountBudgeted.value;
+    };
+  console.log(budgetArray);
+  addCategoryToBudgetForm.style.display = "none";
+  // form.reset();
+}
 
 
 //On submit, category and weekly budget get input get logged to dashboard && icon gets added to the top list in a new row above the button to be viewed on default during next  || OR on submit, transaction amount spent gets logged to appropriate pre-existing category on dashboard
