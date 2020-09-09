@@ -163,10 +163,16 @@
     margin-top: 100px;
     margin-left: 43px;
   }
+
+  #donutContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .donut {
     display: flex;
     justify-self: center;
-    margin-left: 10%;
+    justify-content: center;
     width: 200px;
     height: 200px;
     border: 1px solid black;
@@ -266,6 +272,12 @@
     width: 100%;
     margin-top: 15px;
     align-items: center;
+  }
+
+  #donutContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15%;
   }
 
   .donut {

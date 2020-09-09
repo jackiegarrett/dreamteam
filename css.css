@@ -17,40 +17,49 @@ a:hover {
 button:hover {
   background-color: rgb(0, 112, 225);
 }
+
+body {
+  margin: 0;
+  top: 0;
+  left: 0;
+}
 /* Media Queries */
 /* 320px */
 @media screen and (min-width: 320px) {
   .main-container {
     display: flex;
-    margin: auto;
-    height: 600px;
-    width: 320px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
   }
   .login-container {
-    margin-top: 125px;
-    margin-left: 25px;
+    width: 100%;
+    margin-top: 90%;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
     height: 400px;
-    padding-top: 150px;
   }
   .logo {
-    position: relative;
     display: flex;
   }
   .group-2 {
-    width: 112px;
-    height: 41px;
+    display: flex;
     object-fit: contain;
     position: absolute;
-    margin-left: 100px;
-    margin-top: 100px;
+    margin-left: 40%;
+    margin-top: 35%;
   }
   .BG {
-    width: 320px;
-    height: 253px;
+    margin: 0;
+    top: 0;
+    left: 0;
     object-fit: contain;
     position: absolute;
+    width: 100%;
   }
   .email {
     width: 39px;
@@ -117,10 +126,9 @@ button:hover {
 /* 768px */
 @media screen and (min-width: 768px) {
 .main-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 768px;
-    height: 600px;
     margin: auto;
   }
 .logo {
