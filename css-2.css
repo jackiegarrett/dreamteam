@@ -338,10 +338,11 @@
   #buttonContainer {
     position: relative;
     margin-left: 80%;
+    margin-top: 100px;
   }
 
   button {
-    transform: scale(2.2);
+    transform: scale(2.5);
 
   }
 
@@ -398,7 +399,7 @@
 
   .food-cat {
     display: flex;
-    margin-top: 3%;
+    margin-top: 10%;
     margin-left: 30%;
     margin-right: 30px;
     height: 74px;
