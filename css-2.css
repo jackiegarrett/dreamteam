@@ -11,7 +11,11 @@
     border-radius: 100%;
     border: none;
     background-color: white;
+<<<<<<< HEAD
     box-shadow: 0px 0px 40px 0px rgba(80, 135, 236, .5);
+=======
+    box-shadow: 0px 0px 40px 0px rgba(80, 135, 236, 0.5);
+>>>>>>> Rais-Branch
     outline: none;
   }
 
@@ -92,7 +96,11 @@
     text-align: center;
     color: #888888;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> Rais-Branch
   .categories {
     padding-top: 3%;
     display: flex;
@@ -112,7 +120,18 @@
     margin-bottom: 8px;
   }
 
+<<<<<<< HEAD
   .food-cat:active, .food-cat:hover, .groceries-cat:active, .groceries-cat:hover, .bills-cat:active, .bills-cat:hover, .entertainment-cat:active, .entertainment-cat:hover {
+=======
+  .food-cat:active,
+  .food-cat:hover,
+  .groceries-cat:active,
+  .groceries-cat:hover,
+  .bills-cat:active,
+  .bills-cat:hover,
+  .entertainment-cat:active,
+  .entertainment-cat:hover {
+>>>>>>> Rais-Branch
     position: static;
     background-color: #f4f4f4;
     padding-right: 5px;
@@ -134,6 +153,15 @@
   .entertainment-cat {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
+=======
+    margin-bottom: 8px;
+  }
+  .commonCategory {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+>>>>>>> Rais-Branch
   }
   .push {
     margin-left: auto;
@@ -163,6 +191,7 @@
     margin-top: 100px;
     margin-left: 43px;
   }
+<<<<<<< HEAD
 
   #donutContainer {
     width: 100%;
@@ -173,6 +202,12 @@
     display: flex;
     justify-self: center;
     justify-content: center;
+=======
+  .donut {
+    display: flex;
+    justify-self: center;
+    margin-left: 10%;
+>>>>>>> Rais-Branch
     width: 200px;
     height: 200px;
     border: 1px solid black;
@@ -225,6 +260,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+<<<<<<< HEAD
     
   }
 
@@ -232,6 +268,11 @@
 }
 @media screen and (min-width: 768px) {
 
+=======
+  }
+}
+@media screen and (min-width: 768px) {
+>>>>>>> Rais-Branch
   #buttonContainer {
     position: relative;
     margin-left: 80%;
@@ -274,12 +315,15 @@
     align-items: center;
   }
 
+<<<<<<< HEAD
   #donutContainer {
     display: flex;
     justify-content: flex-start;
     margin-top: 15%;
   }
 
+=======
+>>>>>>> Rais-Branch
   .donut {
     margin: auto;
   }
@@ -326,31 +370,55 @@
   }
   .bills-cat {
     padding: 3%;
+<<<<<<< HEAD
     display: flex; 
+=======
+    display: flex;
+>>>>>>> Rais-Branch
   }
   .entertainment-cat {
     padding: 3%;
     display: flex;
+<<<<<<< HEAD
   }
 
+=======
+    margin-bottom: 8px;
+  }
+  .commonCategory {
+    padding: 3%;
+    display: flex;
+    margin-bottom: 8px;
+  }
+>>>>>>> Rais-Branch
   .push {
     margin-right: 10px;
   }
 }
 @media screen and (min-width: 1024px) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> Rais-Branch
   #navBar {
     display: flex;
     justify-content: space-between;
     left: 0;
     margin-left: 5%;
     margin-right: 5%;
+<<<<<<< HEAD
 
   }
   
   .main-container2 {
     width: 100%;
 
+=======
+  }
+
+  .main-container2 {
+    width: 100%;
+>>>>>>> Rais-Branch
   }
   .bg3 {
     display: flex;
@@ -358,7 +426,11 @@
     margin-top: 75px;
   }
   .bottom {
+<<<<<<< HEAD
     width: 1024px;;
+=======
+    width: 1024px;
+>>>>>>> Rais-Branch
     height: 32px;
     font-family: Roboto;
     font-size: 14px;
@@ -388,7 +460,10 @@
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     
+=======
+>>>>>>> Rais-Branch
   }
   .food-cat {
     display: flex;
@@ -401,7 +476,11 @@
   .groceries-cat {
     display: flex;
     margin-left: 30%;
+<<<<<<< HEAD
     margin-right: 30px;    
+=======
+    margin-right: 30px;
+>>>>>>> Rais-Branch
     height: 74px;
     margin-bottom: 0;
   }
@@ -417,7 +496,18 @@
     margin-left: 30%;
     margin-right: 30px;
     height: 74px;
+<<<<<<< HEAD
     margin-bottom: 0;
+=======
+    margin-bottom: 0px;
+  }
+  .commonCategory {
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30px;
+    height: 74px;
+    margin-bottom: 0px;
+>>>>>>> Rais-Branch
   }
   .donut {
     width: 250px;
