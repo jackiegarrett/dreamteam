@@ -14,7 +14,7 @@ const login = (event) => {
   let formPassword = document.getElementById("password").value;
   console.log();
   if (formEmail === "raihan2345@gmail.com" && formPassword === "12345678") {
-    window.open("https://www.google.com/", "_self");
+    window.open("dashboard.html", "_self");
   } else {
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
@@ -57,6 +57,7 @@ const login = (event) => {
 
 // //Submit button needs sendBudget + addBudgetCategory needs to separate
 
+
 const unfoldMoreCategoriesForm = () => {
   event.preventDefault();
   addCategoryToBudgetForm.style.display = "inline";
@@ -77,7 +78,7 @@ const unfoldMoreCategoriesForm = () => {
 //     budgetArray[i]["amount"] = amountBudgeted.value;
 //     };
 //   console.log(budgetArray);
-//   form.reset();
+//   // form.reset();
 // }
 
 
@@ -93,6 +94,10 @@ const addNewCategory = () => {
     addTransactionForm.style.display = "none";
   }
 };
+
+const toggleTransactionPage = (event) => {
+  document.getElementById("transactionPageDisplay").style.display = "inline";
+}
 
 var selectedText = "";
 
@@ -120,10 +125,10 @@ const unfoldTransactionForm = (selectedCategory) => {
 // calling unfoldTransactionForm function when user clicks add new category
 const AddNewCategory = (selectedCategory) => {
   event.preventDefault();
-  addTransactionForm.style.display = "inline";
+  // addTransactionForm.style.display = "inline";
   console.log(selectedCategory);
   selectedText = selectedCategory;
-  unfoldTransactionForm(selectedCategory);
+  // unfoldTransactionForm(selectedCategory);
 };
 
 let addTransactionForm = document.getElementById("addTransactionForm");

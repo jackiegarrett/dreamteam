@@ -227,6 +227,14 @@
 }
 @media screen and (min-width: 768px) {
 
+  .budget {
+    transform: scale(1.2);
+  }
+  
+  .budget-text {
+    transform: scale(1.2);
+  }
+
   #buttonContainer {
     position: relative;
     margin-left: 80%;
@@ -333,6 +341,14 @@
   }
 }
 @media screen and (min-width: 1024px) {
+
+  .budget {
+    transform: scale(1.5);
+  }
+  
+  .budget-text {
+    transform: scale(1.5);
+  }
 
   #buttonContainer {
     position: relative;

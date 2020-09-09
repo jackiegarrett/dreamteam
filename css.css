@@ -102,7 +102,7 @@ input {
     height: 30px;
     margin-left: -10%;
     margin-top: 2%;
-    filter: invert(38%) sepia(0%) saturate(1%) hue-rotate(151deg) brightness(98%) contrast(77%);
+
   }
 
   .password {
@@ -258,7 +258,6 @@ input[type="submit"] {
       margin-top: 1.5%;
       width: 30px;
       height: 30px;
-
     }
 
     body {

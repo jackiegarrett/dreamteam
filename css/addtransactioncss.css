@@ -25,6 +25,10 @@
     min-height: 100vh;
   }
 
+  /* #transactionPageDisplay {
+    display: none;
+  } */
+
   #transactionPageWrapper {
     padding-bottom: 200px;
   }
