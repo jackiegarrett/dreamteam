@@ -101,7 +101,8 @@ const submitData = () => {
     console.log("database", database);
     var exist = database.filter((x) => x.category == selectCategory);
     console.log("exist", exist);
-    exist[0].used = JSON.parse(amountSpent.value);
+    exist[0].used += JSON.parse(amountSpent.value);
+    console.log(database);
     window.localStorage.setItem("listofCategory", JSON.stringify(database));
   }
   newCategory = "";
@@ -129,9 +130,9 @@ const buildHtml = () => {
     img.classList.add("icon");
     span.innerHTML = listofCategory[i].category;
     spanPush.classList.add("push");
-    spanPush.innerHTML = "$" + listofCategory[i].used.toFixed(2) + " /";
+    spanPush.innerHTML = "$" + used.toFixed(2) + " /";
     spanColor.classList.add("color");
-    spanColor.innerHTML = "$" + listofCategory[i].budget.toFixed(2);
+    spanColor.innerHTML = "$" + budget.toFixed(2);
     div.append(img);
     div.append(span);
     div.append(spanPush);
