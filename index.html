@@ -9,8 +9,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script src="js/app.js"></script>
   </head>
-  <body>
+  <body onload="buildBudgetData()">
     <div class="main-container">
       <div class="logo">
         <img src="Assets/loginbg.svg" class="BG" />
@@ -47,7 +48,7 @@
             />
             <div id="visible" onclick="visibility(event)"><img src="Assets/eye.svg"></div>
           </div>
-          <p id="errorMsg" class="error">Email or password was incorrect</p>
+          <p id="errorMsg" class="error" style="display:none;">Email or password was incorrect</p>
           <input type="submit" type="submit" class="submit" onclick=""></input>
           <a class="create-account" href="http://www.google.com"
             >Create Account</a
@@ -55,6 +56,5 @@
         </form>
       </div>
     </div>
-    <script src="js/app.js"></script>
   </body>
 </html>

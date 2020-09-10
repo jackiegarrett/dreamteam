@@ -11,4 +11,5 @@ document.querySelector('#remove-button-cancel').addEventListener('click', functi
     document.querySelector('.dark-overlay').style.display = 'none';
 });
 
-// When list item is clicked,
+
+// When list item is clicked, save that particular ID and delete from list 
