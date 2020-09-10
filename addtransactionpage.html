@@ -12,206 +12,184 @@
     <title>Add Transaction</title>
   </head>
   <body onload="buildHtmlTransaction()">
-    <div id="transactionPageDisplay">
-      <div id="transactionPageWrapper">
-        <div id="navBar">
-          <img src="Assets/icon-menu.svg" />
-          <img src="Assets/logomark-gradient.svg" />
-          <img src="Assets/profilepic.svg" height="38px" width="38px" />
-        </div>
-        <div id="topNav">
-          <img src="Assets/icon-back.svg" alt="go back" id="iconBack" />
-          <a href="dashboard.html" id="cancel">Cancel</a>
+    <div id="transactionPageWrapper">
+      <div id="navBar">
+        <img src="Assets/icon-menu.svg" />
+        <img src="Assets/logomark-gradient.svg" />
+        <img src="Assets/profilepic.svg" height="38px" width="38px" />
+      </div>
+      <div id="topNav">
+        <img src="Assets/icon-back.svg" alt="go back" id="iconBack" />
+        <a href="dashboard.html" id="cancel">Cancel</a>
+      </div>
+
+      <form>
+        <label id="chooseCategoryTitle">Choose Category:</label>
+        <div id="rowsOfButtons">
+          <div id="row1">
+            <input
+              type="image"
+              src="Assets/foodsvg.svg"
+              id="food"
+              name="selectCategory"
+              value="Food"
+              onclick="unfoldTransactionForm(event)"
+            />
+            <label for="food">Food</label>
+          </div>
+          <div id="row2">
+            <input
+              type="image"
+              src="Assets/groceriessvg.svg"
+              id="groceries"
+              name="selectCategory"
+              value="Groceries"
+              onclick="unfoldTransactionForm(event)"
+            />
+            <label for="Groceries">Groceries</label>
+          </div>
+          <div id="row3">
+            <input
+              type="image"
+              src="Assets/billssvg.svg"
+              id="bills"
+              name="selectCategory"
+              value="Bills"
+              onclick="unfoldTransactionForm(event)"
+            />
+            <label for="Bills">Bills</label>
+          </div>
+          <div id="row4">
+            <input
+              type="image"
+              src="Assets/entertainmentsvg.svg"
+              id="entertainment"
+              name="selectCategory"
+              value="Entertainment"
+              onclick="unfoldTransactionForm(event)"
+            />
+            <label for="Entertainment">Entertain</label>
+          </div>
         </div>
 
-        <form>
-          <label id="chooseCategoryTitle">Choose Category:</label>
-          <div id="rowsOfButtons">
+        <div id="buttonContainer">
+          <button onclick="unfoldMoreCategoriesForm()">
+            <img src="Assets/icon-add.svg" />
+          </button>
+        </div>
+
+        <div id="addCategoryToBudgetForm">
+          <label id="moreCategoriesTitle"
+            >Which category would you like to add?</label
+          >
+
+          <div id="rowsOfButtons2">
             <div id="row1">
               <input
                 type="image"
-                src="Assets/foodsvg.svg"
-                id="food"
+                src="Assets/clothingsvg.svg"
+                id="clothing"
                 name="selectCategory"
-                value="Food"
-                onclick="unfoldTransactionForm(event)"
+                value="Clothing"
+                onclick="AddNewCategory('Clothing');"
               />
-              <label for="food">Food</label>
+              <label for="Clothing">Clothing</label>
             </div>
             <div id="row2">
               <input
                 type="image"
-                src="Assets/groceriessvg.svg"
-                id="groceries"
+                src="Assets/petsvg.svg"
+                id="pet"
                 name="selectCategory"
-                value="Groceries"
-                onclick="unfoldTransactionForm(event)"
+                value="Pet"
+                onclick="AddNewCategory('Pet');"
               />
-              <label for="Groceries">Groceries</label>
+              <label for="Pet">Pet</label>
             </div>
             <div id="row3">
               <input
                 type="image"
-                src="Assets/billssvg.svg"
-                id="bills"
+                src="Assets/transportsvg.svg"
+                id="transport"
                 name="selectCategory"
-                value="Bills"
-                onclick="unfoldTransactionForm(event)"
+                value="Transport"
+                onclick="AddNewCategory('Transport');"
               />
-              <label for="Bills">Bills</label>
+              <label for="Transport">Transport</label>
             </div>
             <div id="row4">
               <input
                 type="image"
-                src="Assets/entertainmentsvg.svg"
-                id="entertainment"
+                src="Assets/othersvg.svg"
+                id="other"
                 name="selectCategory"
-                value="Entertainment"
-                onclick="unfoldTransactionForm(event)"
+                value="Other"
+                onclick="AddNewCategory('Other');"
               />
-              <label for="Entertainment">Entertain</label>
+              <label for="Other">Other</label>
             </div>
           </div>
 
-          <div id="buttonContainer">
-            <button onclick="unfoldMoreCategoriesForm()">
-              <img src="Assets/icon-add.svg" />
-            </button>
-          </div>
-
-          <div id="addCategoryToBudgetForm">
-            <label id="moreCategoriesTitle"
-              >Which category would you like to add?</label
-            >
-
-<<<<<<< HEAD
-            <div id="rowsOfButtons2">
-              <div id="row1">
-                <input
-                  type="image"
-                  src="Assets/clothingsvg.svg"
-                  id="clothing"
-                  name="selectCategory"
-                  value="Clothing"
-                  onclick="AddNewCategory('Clothing')"
-                />
-                <label for="Clothing">Clothing</label>
-              </div>
-              <div id="row2">
-                <input
-                  type="image"
-                  src="Assets/petsvg.svg"
-                  id="pet"
-                  name="selectCategory"
-                  value="Pet"
-                  onclick="AddNewCategory('Pet')"
-                />
-                <label for="Pet">Pet</label>
-              </div>
-              <div id="row3">
-                <input
-                  type="image"
-                  src="Assets/transportsvg.svg"
-                  id="transport"
-                  name="selectCategory"
-                  value="Transport"
-                  onclick="AddNewCategory('Transport')"
-                />
-                <label for="Transport">Transport</label>
-              </div>
-              <div id="row4">
-                <input
-                  type="image"
-                  src="Assets/othersvg.svg"
-                  id="other"
-                  name="selectCategory"
-                  value="Other"
-                  onclick="AddNewCategory('Other')"
-                />
-                <label for="Other">Other</label>
-              </div>
-            </div>
-=======
-                    <div id="setWeeklyBudget">
-                        <label id="setWeeklyBudgetTitle">Set Weekly Budget</label>
-                        <input type="number" id="budgetInput" name="selectCategory" placeholder="" class="textSize" maxlength="6">
-                    </div>
-                    <div id="submitButtonContainer">
-                        <input type="submit" value="Submit" id="submitButtonTransaction submitButton" name="selectCategory" class="submitButton" onclick="submitData()">
-                    </div>
-                </div>
-            </form>
->>>>>>> d86a7515fd15f453e09b9e37fb4a7d8bf71d3152
-
-            <div id="setWeeklyBudget">
-              <label id="setWeeklyBudgetTitle">Set Weekly Budget</label>
-              <input
-                type="number"
-                id="budgetInput"
-                name="selectCategory"
-                placeholder=""
-                class="textSize"
-                maxlength="6"
-              />
-            </div>
-            <div id="submitButtonContainer">
-              <input
-                type="submit"
-                id="submitButtonCategory"
-                name="selectCategory"
-                class="submitButton"
-                onclick="submitData()"
-              />
-            </div>
-          </div>
-        </form>
-
-        <form>
-          <div id="addTransactionForm">
-            <label id="moneySpentOnTitle"
-              >What did you spend your money on?</label
-            >
-            <input
-              type="text"
-              id="spentMoneyOn"
-              name="inputSpentMoneyOn"
-              placeholder=""
-              class="textSize"
-              maxlength="16"
-              autofocus
-            />
-
-<<<<<<< HEAD
-            <label id="amountSpentTitle">How much did you spend?</label>
+          <div id="setWeeklyBudget">
+            <label id="setWeeklyBudgetTitle">Set Weekly Budget</label>
             <input
               type="number"
-              id="amountSpent"
-              name="amountSpentNumber"
+              id="budgetInput"
+              name="selectCategory"
               placeholder=""
               class="textSize"
+              maxlength="6"
             />
-=======
-                    <div id="submitButtonContainer">
-                        <input type="submit" value="Submit" id="submitButtonTransaction submitButton" name="selectCategory" class="submitButton" onclick="submitData()">
-                    </div>
-                </div>
-            </form>
->>>>>>> d86a7515fd15f453e09b9e37fb4a7d8bf71d3152
-
-            <div id="submitButtonContainer">
-              <input
-                type="submit"
-                id="submitButtonTransaction"
-                name="selectCategory"
-                class="submitButton"
-                onclick="submitData()"
-              />
-            </div>
           </div>
-        </form>
+          <div id="submitButtonContainer">
+            <input
+              type="submit"
+              id="submitButtonCategory"
+              name="selectCategory"
+              class="submitButton"
+              onclick="submitData();"
+            />
+          </div>
+        </div>
+      </form>
 
-        <img src="Assets/bg.svg" class="BG" />
-      </div>
+      <form>
+        <div id="addTransactionForm">
+          <label id="moneySpentOnTitle"
+            >What did you spend your money on?</label
+          >
+          <input
+            type="text"
+            id="spentMoneyOn"
+            name="inputSpentMoneyOn"
+            placeholder=""
+            class="textSize"
+            maxlength="16"
+            autofocus
+          />
+
+          <label id="amountSpentTitle">How much did you spend?</label>
+          <input
+            type="number"
+            id="amountSpent"
+            name="amountSpentNumber"
+            placeholder=""
+            class="textSize"
+          />
+
+          <div id="submitButtonContainer">
+            <input
+              type="submit"
+              id="submitButtonTransaction"
+              name="selectCategory"
+              class="submitButton"
+              onclick="submitData();"
+            />
+          </div>
+        </div>
+      </form>
+
+      <img src="Assets/bg.svg" class="BG" />
     </div>
   </body>
 </html>

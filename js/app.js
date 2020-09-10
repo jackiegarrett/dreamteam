@@ -34,15 +34,15 @@ const unfoldMoreCategoriesForm = () => {
   }
 };
 
-const sendNewBudget = () => {
-  event.preventDefault();
-  for (i = 0; i < budgetArray.length; i++) {
-    budgetArray[i]["amount"] = amountBudgeted.value;
-  }
-  console.log(budgetArray);
-  addCategoryToBudgetForm.style.display = "none";
-  // form.reset();
-};
+// const sendNewBudget = () => {
+//   event.preventDefault();
+//   for (i = 0; i < budgetArray.length; i++) {
+//     budgetArray[i]["amount"] = amountBudgeted.value;
+//   }
+//   console.log(budgetArray);
+//   addCategoryToBudgetForm.style.display = "none";
+//   // form.reset();
+// };
 
 let newCategory = "";
 const addNewCategory = () => {
@@ -82,8 +82,7 @@ const AddNewCategory = (selectedCategory) => {
 const submitData = () => {
   event.preventDefault();
   console.log(selectCategory);
-  var dataBaseString = window.localStorage.getItem("listofCategory");
-  let database = JSON.parse(dataBaseString);
+  let database = JSON.parse(window.localStorage.getItem("listofCategory"));
   if (newCategory) {
     let budgetInput = document.getElementById("budgetInput");
     database.push({
@@ -116,11 +115,17 @@ const buildHtml = () => {
     let div = document.createElement("div");
     let img = document.createElement("img");
     let span = document.createElement("span");
+    let spanColor = document.createElement("span");
+    let spanPush = document.createElement("span");
     div.classList.add(listofCategory[i].class);
     img.src = listofCategory[i].src;
     img.classList.add("icon");
     span.innerHTML = listofCategory[i].category;
+    spanColor.classList.add("color");
+    spanColor.innerHTML = listofCategory[i].color;
+    spanPush.classList.add(listofCategory[i].push);
     div.append(img);
+    div.append(span);
     div.append(span);
     categories.append(div);
   }
