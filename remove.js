@@ -1,18 +1,3 @@
-// // Overlay/Modal hidden until list item is clicked
-// document.querySelectorAll('.category').addEventListener('click', function() {
-//     document.querySelector('.dark-overlay').style.display = 'block';
-// });
-
-
-// // Cancel dismisses Overlay/Modal
-// document.querySelector('#remove-button-cancel').addEventListener('click', function() {
-//     document.querySelector('.dark-overlay').style.display = 'none';
-// });
-
-
-// When list item is clicked,
-
-
 // Modal hidden until list item is clicked
 document.querySelectorAll('.category').forEach((item) => {
     item.addEventListener('click', function() {
@@ -25,3 +10,5 @@ document.querySelectorAll('.category').forEach((item) => {
 document.querySelector('#remove-button-cancel').addEventListener('click', function() {
     document.querySelector('.dark-overlay').style.display = 'none';
 });
+
+// When list item is clicked,
