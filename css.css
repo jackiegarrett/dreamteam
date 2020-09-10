@@ -35,6 +35,7 @@ input {
   display: flex;
   justify-content: center;
   color: #ff2f64;
+  text-align: center;
 }
 
 /* Media Queries */
