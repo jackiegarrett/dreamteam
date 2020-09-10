@@ -1,3 +1,6 @@
+let totalUsed = 0;
+let totalBudget = 0;
+
 const visibility = () => {
   var x = document.getElementById("password");
   if (x.type === "password") {
@@ -111,7 +114,11 @@ const buildHtml = () => {
     window.localStorage.getItem("listofCategory")
   );
   console.log("listofCategory", listofCategory);
+  let used = 0;
+  let budget = 0;
   for (let i = 0; i < listofCategory.length; i++) {
+    used += parseFloat(listofCategory[i].used);
+    budget += parseFloat(listofCategory[i].budget);
     let div = document.createElement("div");
     let img = document.createElement("img");
     let span = document.createElement("span");
@@ -121,14 +128,18 @@ const buildHtml = () => {
     img.src = listofCategory[i].src;
     img.classList.add("icon");
     span.innerHTML = listofCategory[i].category;
+    spanPush.classList.add("push");
+    spanPush.innerHTML = "$" + listofCategory[i].used.toFixed(2) + " /";
     spanColor.classList.add("color");
-    spanColor.innerHTML = listofCategory[i].color;
-    spanPush.classList.add(listofCategory[i].push);
+    spanColor.innerHTML = "$" + listofCategory[i].budget.toFixed(2);
     div.append(img);
     div.append(span);
-    div.append(span);
+    div.append(spanPush);
+    div.append(spanColor);
     categories.append(div);
   }
+  document.getElementById("totalBudgetAvailable").innerHTML =
+    "$" + (budget - used).toFixed(2);
 };
 
 const buildBudgetData = () => {

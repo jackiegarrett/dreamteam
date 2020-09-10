@@ -11,7 +11,7 @@
     border-radius: 100%;
     border: none;
     background-color: white;
-    box-shadow: 0px 0px 40px 0px rgba(80, 135, 236, .5);
+    box-shadow: 0px 0px 40px 0px rgba(80, 135, 236, 0.5);
     outline: none;
   }
 
@@ -92,7 +92,7 @@
     text-align: center;
     color: #888888;
   }
-  
+
   .categories {
     padding-top: 3%;
     display: flex;
@@ -112,7 +112,14 @@
     margin-bottom: 8px;
   }
 
-  .food-cat:active, .food-cat:hover, .groceries-cat:active, .groceries-cat:hover, .bills-cat:active, .bills-cat:hover, .entertainment-cat:active, .entertainment-cat:hover {
+  .food-cat:active,
+  .food-cat:hover,
+  .groceries-cat:active,
+  .groceries-cat:hover,
+  .bills-cat:active,
+  .bills-cat:hover,
+  .entertainment-cat:active,
+  .entertainment-cat:hover {
     position: static;
     background-color: #f4f4f4;
     padding-right: 5px;
@@ -213,8 +220,6 @@
     margin-left: 0%;
   }
 
-
-
   .BG {
     display: inline;
     position: absolute;
@@ -222,12 +227,8 @@
     left: 0;
     width: 100%;
   }
-
-
 }
 @media screen and (min-width: 768px) {
-
-
   #buttonContainer {
     position: relative;
     margin-left: 80%;
@@ -321,20 +322,18 @@
   }
   .bills-cat {
     padding: 3%;
-    display: flex; 
+    display: flex;
   }
   .entertainment-cat {
     padding: 3%;
     display: flex;
     margin-bottom: 10%;
   }
-
   .push {
     margin-right: 10px;
   }
 }
 @media screen and (min-width: 1024px) {
-
   #buttonContainer {
     position: relative;
     margin-left: 80%;
@@ -343,7 +342,6 @@
 
   button {
     transform: scale(2.5);
-
   }
 
   #navBar {
@@ -352,12 +350,10 @@
     left: 0;
     margin-left: 5%;
     margin-right: 5%;
-
   }
-  
+
   .main-container2 {
     width: 100%;
-
   }
   .bg3 {
     display: flex;
@@ -365,7 +361,7 @@
     margin-top: 75px;
   }
   .bottom {
-    width: 1024px;;
+    width: 1024px;
     height: 32px;
     font-family: Roboto;
     font-size: 14px;
@@ -408,7 +404,7 @@
   .groceries-cat {
     display: flex;
     margin-left: 30%;
-    margin-right: 30px;    
+    margin-right: 30px;
     height: 74px;
     margin-bottom: 0;
   }
@@ -425,7 +421,6 @@
     margin-right: 30px;
     height: 74px;
   }
-
 
   .donut {
     width: 250px;
