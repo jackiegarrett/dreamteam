@@ -13,8 +13,8 @@ const login = (event) => {
   let formEmail = document.getElementById("email").value;
   let formPassword = document.getElementById("password").value;
   console.log();
-  if (formEmail === "raihan2345@gmail.com" && formPassword === "12345678") {
-    window.open("https://www.google.com/", "_self");
+  if (formEmail === "test@gmail.com" && formPassword === "12345678") {
+    window.open("dashboard.html", "_self");
   } else {
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
@@ -23,182 +23,128 @@ const login = (event) => {
   }
 };
 
-// let form = document.querySelector("form");
-// let amountSpent = document.getElementById("amountSpent");
-// let addTransactionForm = document.getElementById("addTransactionForm");
-// let balanceArray = [];
-
-// let amountBudgeted = document.getElementById("budgetInput");
-// let addCategoryToBudgetForm = document.getElementById("addCategoryToBudgetForm");
-// let expandListButton = document.querySelector("button");
-// let budgetArray = [];
-
-// const unfoldTransactionForm = (event) => {
-//   event.preventDefault();
-//   balanceArray.push({
-//     category:event.target.id
-//   })
-//   addTransactionForm.style.display = "inline";
-//   if (addCategoryToBudgetForm.style.display === "inline" && addTransactionForm.style.display === "inline") {
-//     addCategoryToBudgetForm.style.display = "none";
-//   }
-// }
-
-// //Each time I enter a new transaction, the value in all objects is updated to equal the most recent one.
-// const sendNewTransaction = () => {
-//   event.preventDefault();
-//   for (i = 0; i < balanceArray.length; i++) {
-//   balanceArray[i]["amount"] = amountSpent.value;
-//   }
-//   console.log(balanceArray);
-//   //Form doesn't clear automatically
-//   form.reset();
-//   }
-
-// //Submit button needs sendBudget + addBudgetCategory needs to separate
-
-// const unfoldMoreCategoriesForm = () => {
-//   event.preventDefault();
-//   addCategoryToBudgetForm.style.display = "inline";
-//   if (addCategoryToBudgetForm.style.display === "inline" && addTransactionForm.style.display === "inline") {
-//     addTransactionForm.style.display = "none";}
-// }
-
-// const addBudgetCategory = (event) => {
-//   event.preventDefault();
-//   budgetArray.push({
-//     category:event.target.id
-//   });
-// }
-
-// const sendNewBudget = () => {
-//   event.preventDefault();
-//   for (i = 0; i < budgetArray.length; i++) {
-//     budgetArray[i]["amount"] = amountBudgeted.value;
-//     };
-//   console.log(budgetArray);
-//   form.reset();
-// }
-
-// expandListButton.addEventListener("click", unfoldMoreCategoriesForm);
-
-//On submit, category and weekly budget get input get logged to dashboard && icon gets added to the top list in a new row above the button to be viewed on default during next  || OR on submit, transaction amount spent gets logged to appropriate pre-existing category on dashboard
-
-const addNewCategory = () => {
-  event.preventDefault();
-  addCategoryToBudgetForm.style.display = "inline";
-  if (
-    addCategoryToBudgetForm.style.display === "inline" &&
-    addTransactionForm.style.display === "inline"
-  ) {
-    addTransactionForm.style.display = "none";
-  }
+const toggleTransactionPage = (event) => {
+  document.getElementById("transactionPageDisplay").style.display = "inline";
 };
 
-var selectedText = "";
-
+let selectCategory = "";
 //when user selects category
 const unfoldTransactionForm = (selectedCategory) => {
   event.preventDefault();
   addTransactionForm.style.display = "inline";
-  //if (addCategoryToBudgetForm.style.display === "inline" && addTransactionForm.style.display === "inline") {
-  //    addCategoryToBudgetForm.style.display = "none";
-  //}
-  console.log(selectedCategory);
-  selectedText = selectedCategory;
-  var dataBaseString = window.localStorage.getItem("budgetAppData");
-  let database = JSON.parse(dataBaseString);
-  var exist = database.listofCategory.findIndex(
-    (x) => x.category == selectedText
-  );
-  if (exist != -1) {
-    document.getElementById("budgetInput").value =
-      database.listofCategory[exist].budget;
-  } else {
-    document.getElementById("budgetInput").value = 0;
+  if (
+    addCategoryToBudgetForm.style.display === "inline" &&
+    addTransactionForm.style.display === "inline"
+  ) {
+    addCategoryToBudgetForm.style.display = "none";
   }
+  selectCategory = selectedCategory.target.value;
 };
 // calling unfoldTransactionForm function when user clicks add new category
 const AddNewCategory = (selectedCategory) => {
-  //event.preventDefault();
-  //addTransactionForm.style.display = "inline";
-  //console.log(selectedCategory);
-  //selectedText = selectedCategory;
-  unfoldTransactionForm(selectedCategory);
+  event.preventDefault();
+  newCategory = selectedCategory;
 };
-
-let addTransactionForm = document.getElementById("addTransactionForm");
-let addCategoryToBudgetForm = document.getElementById(
-  "addCategoryToBudgetForm"
-);
-
-let expandListButton = document.querySelector("button");
-let foodButton = document.getElementById("food");
-let groceriesButton = document.getElementById("groceries");
-let billsButton = document.getElementById("bills");
-let entertainmentButton = document.getElementById("entertainment");
-
-//expandListButton.addEventListener("click", addNewCategory);
-//document.getElementById("row1").addEventListener("click", unfoldTransactionForm)
 
 const submitData = () => {
-  //if category not selected
-  if (selectedText == "" || selectedText == null) {
-    alert("select category");
-  } else {
-    var amount = document.getElementById("amountSpent").value;
-    var budget = document.getElementById("budgetInput").value;
-    if (amount && amount >= 0) {
-      var dataBaseString = window.localStorage.getItem("budgetAppData");
-      let database = JSON.parse(dataBaseString);
-      var exist = database.listofCategory.findIndex(
-        (x) => x.category == selectedText
-      );
-      if (exist != -1) {
-        var num1 = parseFloat(database.listofCategory[exist].used) || 0;
-        var num2 = parseFloat(amount) || 0;
-        var floatBudget = parseFloat(budget) || 0;
-        if (num1 + num2 > floatBudget) {
-          alert("Out of budget");
-        } else {
-          database.listofCategory[exist].used = num1 + num2;
-          database.listofCategory[exist].budget = floatBudget;
-          window.localStorage.setItem(
-            "budgetAppData",
-            JSON.stringify(database)
-          );
-          document.getElementById("amountSpent").value = 0;
-        }
-      } else {
-        var iconNew = document.getElementById(selectedText.toLowerCase());
-        if (iconNew != null) {
-          console.log(iconNew);
-          let newCat = {};
-          newCat.budget =
-            parseFloat(document.getElementById("budgetInput").value) || 0;
-          newCat.category = selectedText;
-          //common class added in css
-          newCat.class = "commonCategory";
-          newCat.src = iconNew.getAttribute("src");
-          newCat.used =
-            parseFloat(document.getElementById("amountSpent").value) || 0;
-          if (newCat.used > newCat.budget) {
-            alert("out of budget");
-            return;
-          }
-          console.log(newCat);
-          database.listofCategory.push(newCat);
-          window.localStorage.setItem(
-            "budgetAppData",
-            JSON.stringify(database)
-          );
-          document.getElementById("budgetInput").value = 0;
-        } else {
-          alert("Invalid Category");
-        }
-      }
-    } else {
-      alert("Enter Amount");
+  event.preventDefault();
+  console.log(selectCategory);
+  let database = JSON.parse(window.localStorage.getItem("listofCategory"));
+  let amountSpent = document.getElementById("amountSpent");
+  console.log("database", database);
+  var exist = database.filter((x) => x.category == selectCategory);
+  console.log("exist", exist);
+  exist[0].used += JSON.parse(amountSpent.value);
+  window.localStorage.setItem("listofCategory", JSON.stringify(database));
+};
+
+const buildHtml = () => {
+  let categories = document.getElementById("categories");
+  const listofCategory = JSON.parse(
+    window.localStorage.getItem("listofCategory")
+  );
+  console.log("listofCategory", listofCategory);
+  let totalUsed = 0;
+  let totalBudget = 0;
+  for (let i = 0; i < listofCategory.length; i++) {
+    let used = parseFloat(listofCategory[i].used);
+    let budget = parseFloat(listofCategory[i].budget);
+    totalUsed += used;
+    totalBudget += budget;
+    let div = document.createElement("div");
+    let img = document.createElement("img");
+    let span = document.createElement("span");
+    let spanColor = document.createElement("span");
+    let spanPush = document.createElement("span");
+    div.classList.add(listofCategory[i].class);
+    img.src = listofCategory[i].src;
+    img.classList.add("icon");
+    span.innerHTML = listofCategory[i].category;
+    spanPush.classList.add("push");
+    spanPush.innerHTML = "$" + listofCategory[i].used.toFixed(2) + " /";
+    spanColor.classList.add("color");
+    spanColor.innerHTML = "$" + listofCategory[i].budget.toFixed(2);
+    div.append(img);
+    div.append(span);
+    div.append(spanPush);
+    div.append(spanColor);
+    categories.append(div);
+    if (used >= budget) {
+      span.style.color = "red";
+      spanPush.style.color = "red";
+      spanColor.style.color = "red";
     }
   }
+  document.getElementById("totalBudgetAvailable").innerHTML =
+    "$" + (totalBudget - totalUsed).toFixed(2);
 };
+
+const buildBudgetData = () => {
+  const budgetData = {
+    TotalBudget: 350,
+    listofCategory: [
+      {
+        category: "Food",
+        used: 0,
+        budget: 50,
+        class: "food-cat",
+        src: "./Assets/foodsvg.svg",
+      },
+      {
+        category: "Groceries",
+        used: 0,
+        budget: 100,
+        class: "groceries-cat",
+        src: "./Assets/groceriessvg.svg",
+      },
+      {
+        category: "Bills",
+        used: 0,
+        budget: 150,
+        class: "bills-cat",
+        src: "./Assets/billssvg.svg",
+      },
+      {
+        category: "Entertainment",
+        used: 0,
+        budget: 50,
+        class: "entertainment-cat",
+        src: "./Assets/entertainmentsvg.svg",
+      },
+    ],
+  };
+  window.localStorage.setItem(
+    "listofCategory",
+    JSON.stringify(budgetData.listofCategory)
+  );
+  window.localStorage.setItem("TotalBudget", 350);
+};
+
+// const deleteFunction = (categoryName) => {
+//   console.log(categoryName);
+//   let database = JSON.parse(window.localStorage.getItem("listofCategory"));
+//   let clickedCategoryIndex = database.listofCategory.findIndex(
+//     (x) => x.category == categoryName
+//   );
+//   console.log(clickedCategoryIndex);
+// };

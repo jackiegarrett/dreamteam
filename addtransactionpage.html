@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="./js/app.js"></script>
     <title>Add Transaction</title>
   </head>
   <body>
@@ -19,60 +20,60 @@
       </div>
       <div id="topNav">
         <img src="Assets/icon-back.svg" alt="go back" id="iconBack" />
-        <a href="dashboard page" id="cancel">Cancel</a>
+        <a href="dashboard.html" id="cancel">Cancel</a>
       </div>
 
       <form>
         <label id="chooseCategoryTitle">Choose Category:</label>
         <div id="rowsOfButtons">
-          <div id="row1">
+          <div class="row">
             <input
               type="image"
               src="Assets/foodsvg.svg"
               id="food"
               name="selectCategory"
-              value="food"
-              onclick="unfoldTransactionForm('Food')"
+              value="Food"
+              onclick="unfoldTransactionForm(event)"
             />
             <label for="food">Food</label>
           </div>
-          <div id="row2">
+          <div class="row">
             <input
               type="image"
               src="Assets/groceriessvg.svg"
               id="groceries"
               name="selectCategory"
               value="Groceries"
-              onclick="unfoldTransactionForm('Groceries')"
+              onclick="unfoldTransactionForm(event)"
             />
             <label for="Groceries">Groceries</label>
           </div>
-          <div id="row3">
+          <div class="row">
             <input
               type="image"
               src="Assets/billssvg.svg"
               id="bills"
               name="selectCategory"
               value="Bills"
-              onclick="unfoldTransactionForm('Bills')"
+              onclick="unfoldTransactionForm(event)"
             />
             <label for="Bills">Bills</label>
           </div>
-          <div id="row4">
+          <div class="row">
             <input
               type="image"
               src="Assets/entertainmentsvg.svg"
               id="entertainment"
               name="selectCategory"
               value="Entertainment"
-              onclick="unfoldTransactionForm('Entertainment')"
+              onclick="unfoldTransactionForm(event)"
             />
             <label for="Entertainment">Entertain</label>
           </div>
         </div>
 
         <div id="buttonContainer">
-          <button onclick="addNewCategory()">
+          <button onclick="unfoldMoreCategoriesForm()">
             <img src="Assets/icon-add.svg" />
           </button>
         </div>
@@ -83,47 +84,47 @@
           >
 
           <div id="rowsOfButtons2">
-            <div id="row1">
+            <div class="row">
               <input
                 type="image"
-                src="./Assets/clothingsvg.svg"
+                src="Assets/clothingsvg.svg"
                 id="clothing"
                 name="selectCategory"
                 value="Clothing"
-                onclick="AddNewCategory('Clothing')"
+                onclick="AddNewCategory('Clothing');"
               />
               <label for="Clothing">Clothing</label>
             </div>
-            <div id="row2">
+            <div class="row">
               <input
                 type="image"
                 src="Assets/petsvg.svg"
                 id="pet"
                 name="selectCategory"
                 value="Pet"
-                onclick="AddNewCategory('Pet')"
+                onclick="AddNewCategory('Pet');"
               />
               <label for="Pet">Pet</label>
             </div>
-            <div id="row3">
+            <div class="row">
               <input
                 type="image"
                 src="Assets/transportsvg.svg"
                 id="transport"
                 name="selectCategory"
                 value="Transport"
-                onclick="AddNewCategory('Transport')"
+                onclick="AddNewCategory('Transport');"
               />
               <label for="Transport">Transport</label>
             </div>
-            <div id="row4">
+            <div class="row">
               <input
                 type="image"
                 src="Assets/othersvg.svg"
                 id="other"
                 name="selectCategory"
                 value="Other"
-                onclick="AddNewCategory('Other')"
+                onclick="AddNewCategory('Other');"
               />
               <label for="Other">Other</label>
             </div>
@@ -142,12 +143,11 @@
           </div>
           <div id="submitButtonContainer">
             <input
-              type="button"
-              value="Submit"
-              id="submitButton"
+              type="submit"
+              id="submitButtonCategory"
               name="selectCategory"
               class="submitButton"
-              onclick="submitData()"
+              onclick="submitData();"
             />
           </div>
         </div>
@@ -155,7 +155,7 @@
 
       <form>
         <div id="addTransactionForm">
-          <!-- <label id="moneySpentOnTitle"
+          <label id="moneySpentOnTitle"
             >What did you spend your money on?</label
           >
           <input
@@ -166,7 +166,7 @@
             class="textSize"
             maxlength="16"
             autofocus
-          /> -->
+          />
 
           <label id="amountSpentTitle">How much did you spend?</label>
           <input
@@ -179,12 +179,11 @@
 
           <div id="submitButtonContainer">
             <input
-              type="button"
-              value="Submit"
-              id="submitButton"
+              type="submit"
+              id="submitButtonTransaction"
               name="selectCategory"
               class="submitButton"
-              onclick="submitData()"
+              onclick="submitData();"
             />
           </div>
         </div>
@@ -192,7 +191,5 @@
 
       <img src="Assets/bg.svg" class="BG" />
     </div>
-
-    <script src="./js/app.js"></script>
   </body>
 </html>

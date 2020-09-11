@@ -141,12 +141,6 @@
   .entertainment-cat {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
-  }
-  .commonCategory {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
   }
   .push {
     margin-left: auto;
@@ -161,8 +155,6 @@
     font-size: 40px;
   }
   .bottom {
-    width: 234px;
-    height: 32px;
     font-family: Roboto;
     font-size: 14px;
     font-weight: normal;
@@ -172,14 +164,16 @@
     letter-spacing: normal;
     text-align: center;
     color: white;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 43px;
+  }
+
+  #donutContainer {
+    display: flex;
+    justify-content: center;
   }
   .donut {
     display: flex;
     justify-self: center;
-    margin-left: 10%;
+    justify-content: center;
     width: 200px;
     height: 200px;
     border: 1px solid black;
@@ -277,8 +271,14 @@
     align-items: center;
   }
 
+  #donutContainer {
+    display: flex;
+    justify-content: flex-start;
+  }
+
   .donut {
     margin: auto;
+    margin-top: 10%;
   }
 
   .bg2 {
@@ -291,7 +291,6 @@
   }
   .bottom {
     width: 100%;
-    height: 32px;
     font-family: Roboto;
     font-size: 14px;
     color: white;
@@ -328,18 +327,23 @@
   .entertainment-cat {
     padding: 3%;
     display: flex;
-    margin-bottom: 8px;
-  }
-  .commonCategory {
-    padding: 3%;
-    display: flex;
-    margin-bottom: 8px;
+    margin-bottom: 10%;
   }
   .push {
     margin-right: 10px;
   }
 }
 @media screen and (min-width: 1024px) {
+  #buttonContainer {
+    position: relative;
+    margin-left: 80%;
+    margin-top: 100px;
+  }
+
+  button {
+    transform: scale(2.5);
+  }
+
   #navBar {
     display: flex;
     justify-content: space-between;
@@ -388,11 +392,12 @@
     display: flex;
     flex-direction: column;
   }
+
   .food-cat {
     display: flex;
+    margin-top: 10%;
     margin-left: 30%;
     margin-right: 30px;
-    margin-top: 4%;
     height: 74px;
     margin-bottom: 0;
   }
@@ -415,19 +420,12 @@
     margin-left: 30%;
     margin-right: 30px;
     height: 74px;
-    margin-bottom: 0px;
   }
-  .commonCategory {
-    display: flex;
-    margin-left: 30%;
-    margin-right: 30px;
-    height: 74px;
-    margin-bottom: 0px;
-  }
+
   .donut {
     width: 250px;
     height: 250px;
-    margin-right: 3%;
+    margin-left: 3%;
     border-radius: 200px;
     position: absolute;
     margin-bottom: 5%;

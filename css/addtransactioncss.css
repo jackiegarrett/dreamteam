@@ -25,6 +25,10 @@ body {
   min-height: 100vh;
 }
 
+/* #transactionPageDisplay {
+    display: none;
+  } */
+
 #transactionPageWrapper {
   padding-bottom: 200px;
 }
@@ -67,7 +71,6 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-top: 10%;
     width: 100%;
   }
 }
@@ -84,6 +87,7 @@ body {
   text-decoration: inherit;
   letter-spacing: 2px;
   color: var(--gray);
+  cursor: pointer;
 }
 
 #iconBack {
@@ -91,6 +95,7 @@ body {
   height: 24px;
   margin-right: 8px;
   object-fit: contain;
+  cursor: pointer;
 }
 
 #chooseCategoryTitle,
@@ -158,13 +163,11 @@ label {
   width: 100%;
 }
 
-#row1,
-#row2,
-#row3,
-#row4 {
+.row {
   width: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -202,7 +205,6 @@ button {
   background-color: var(--White);
   outline: none;
   justify-self: center;
-  cursor: pointer;
 }
 
 button:first-child {
@@ -236,7 +238,6 @@ button:active {
   color: var(--White);
   margin-top: 15%;
   margin-bottom: 10%;
-  cursor: pointer;
 }
 
 input {
