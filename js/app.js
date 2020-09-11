@@ -58,13 +58,13 @@ let selectCategory = "";
 //when user selects category
 const unfoldTransactionForm = (selectedCategory) => {
   event.preventDefault();
-  addTransactionForm.style.display = "inline";
-  if (
-    addCategoryToBudgetForm.style.display === "inline" &&
-    addTransactionForm.style.display === "inline"
-  ) {
-    addCategoryToBudgetForm.style.display = "none";
-  }
+  // addTransactionForm.style.display = "inline";
+  // if (
+  //   addCategoryToBudgetForm.style.display === "inline" &&
+  //   addTransactionForm.style.display === "inline"
+  // ) {
+  //   addCategoryToBudgetForm.style.display = "none";
+  // }
   selectCategory = selectedCategory.target.value;
 };
 // calling unfoldTransactionForm function when user clicks add new category
@@ -74,6 +74,14 @@ const AddNewCategory = (selectedCategory) => {
 };
 
 const submitData = () => {
+
+  let categoryAndColor = [
+    {category: "food", color: "#ff2f64"},
+    {category: "groceries", color: "#13d3d5"},
+    {category: "bills", color: "#5087ec"},
+    {category: "entertain", color: "#ffbf46"}
+  ];
+
   event.preventDefault();
   console.log(selectCategory);
   let database = JSON.parse(window.localStorage.getItem("listofCategory"));
@@ -85,6 +93,7 @@ const submitData = () => {
       class: `${newCategory.toLowerCase()}-cat`,
       src: `./Assets/${newCategory.toLowerCase()}svg.svg`,
       used: 0,
+      color: categoryAndColor.filter(where => where.category === newCategory.toLowerCase())[0].color
     });
     window.localStorage.setItem("listofCategory", JSON.stringify(database));
   } else {
@@ -97,6 +106,9 @@ const submitData = () => {
     window.localStorage.setItem("listofCategory", JSON.stringify(database));
   }
   newCategory = "";
+
+  alert("Your transaction has been added.");
+  window.location = "dashboard.html";
 };
 
 const buildHtml = () => {
@@ -121,9 +133,9 @@ const buildHtml = () => {
     img.classList.add("icon");
     span.innerHTML = listofCategory[i].category;
     spanPush.classList.add("push");
-    spanPush.innerHTML = "$" + used.toFixed(2) + " /";
+    spanPush.innerHTML = "$" + listofCategory[i].used.toFixed(2) + " /";
     spanColor.classList.add("color");
-    spanColor.innerHTML = "$" + budget.toFixed(2);
+    spanColor.innerHTML = "$" + listofCategory[i].budget.toFixed(2);
     div.append(img);
     div.append(span);
     div.append(spanPush);
@@ -132,6 +144,8 @@ const buildHtml = () => {
   }
   document.getElementById("totalBudgetAvailable").innerHTML =
     "$" + (budget - used).toFixed(2);
+
+    drawIt();
 };
 
 const buildBudgetData = () => {
@@ -145,6 +159,7 @@ const buildBudgetData = () => {
         budget: 50,
         class: "food-cat",
         src: "./Assets/foodsvg.svg",
+        color: "#ff2f64"
       },
       {
         category: "Groceries",
@@ -152,6 +167,7 @@ const buildBudgetData = () => {
         budget: 100,
         class: "groceries-cat",
         src: "./Assets/groceriessvg.svg",
+        color: "#13d3d5"
       },
       {
         category: "Bills",
@@ -159,6 +175,7 @@ const buildBudgetData = () => {
         budget: 150,
         class: "bills-cat",
         src: "./Assets/billssvg.svg",
+        color: "#5087ec"
       },
       {
         category: "Entertainment",
@@ -166,6 +183,7 @@ const buildBudgetData = () => {
         budget: 50,
         class: "entertainment-cat",
         src: "./Assets/entertainmentsvg.svg",
+        color: "#ffbf46"
       },
     ],
   };
@@ -192,7 +210,7 @@ const buildHtmlTransaction = () => {
     expandListButton.addEventListener("click", addNewCategory);
     document
       .querySelector(".row")
-      .addEventListener("click", unfoldTransactionForm);
+      // .addEventListener("click", unfoldTransactionForm);
   }
 };
 
@@ -216,13 +234,8 @@ const drawPieSlice = (
   ctx.fill();
 };
 //myVinyls is the array that is being referenced in 288. Will have to change to reflect dashboard data.
-// var myVinyls = {
-//   "transport": 20,
-//   "Groceries": 20,
-//   "Bills": 20,
-//   "Entertainment": 20,
-//   "Food": 20,
-// };
+var amountUsedData = {};
+
 // groceries budget = 200 - 105 = 95
 // bills budget = 100 - 55 = 
 const pieChart = (options) => {
@@ -254,10 +267,20 @@ const pieChart = (options) => {
   }
 };
 const drawIt = () => {
+  let listofCategory = JSON.parse(
+    window.localStorage.getItem("listofCategory")
+  );
+  let colorArray = [];
+
+  for (cat in listofCategory) {
+    amountUsedData[listofCategory[cat].category.toLowerCase()] = listofCategory[cat].used;
+    colorArray.push(listofCategory[cat].color);
+  }
+  console.log(colorArray);
   pieChart({
     canvas: document.getElementById("myCanvas"),
     //Update the variable from which it is drawn and make the colors match the Zeplin colors. How to make the color/difference match up? 
-    data: myVinyls,
-    colors: ["#ff0000","#fde23e", "#f16e23", "#57d9ff", "#937e88"],
+    data: amountUsedData,
+    colors: colorArray,
   });
 };
