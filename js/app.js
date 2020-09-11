@@ -37,15 +37,6 @@ const unfoldMoreCategoriesForm = () => {
   }
 };
 
-// const sendNewBudget = () => {
-//   event.preventDefault();
-//   for (i = 0; i < budgetArray.length; i++) {
-//     budgetArray[i]["amount"] = amountBudgeted.value;
-//   }
-//   console.log(budgetArray);
-//   addCategoryToBudgetForm.style.display = "none";
-//   // form.reset();
-// };
 
 let newCategory = "";
 const addNewCategory = () => {
@@ -146,6 +137,7 @@ const buildHtml = () => {
 const buildBudgetData = () => {
   const budgetData = {
     TotalBudget: 350,
+    //color attribute
     listofCategory: [
       {
         category: "Food",
@@ -231,29 +223,8 @@ const drawPieSlice = (
 //   "Entertainment": 20,
 //   "Food": 20,
 // };
-// let balanceArray = {
-//   "groceries": [
-//     {
-//       amount: '50'
-//     },
-//     {
-//       amount: '5'
-//     },
-//     {
-//       amount: '50'
-//     }
-//   ],
-//   "bills": [
-//     {
-//       amount: '50'
-//     },
-//     {
-//       amount: '5'
-//     },
-//   ]
-// }
 // groceries budget = 200 - 105 = 95
-// bills budget = 100 - 55 =
+// bills budget = 100 - 55 = 
 const pieChart = (options) => {
   let canvas = options.canvas;
   let ctx = canvas.getContext("2d");
