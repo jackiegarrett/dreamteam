@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="80" viewBox="0 0 320 80">
+    <defs>
+        <linearGradient id="7qlq6bg4nb" x1="50%" x2="50%" y1="-22.812%" y2="100%">
+            <stop offset="0%" stop-color="#13D3D5"/>
+            <stop offset="100%" stop-color="#5045AB"/>
+        </linearGradient>
+        <path id="i15uuknfja" d="M0 0h320v69.162c-19.578 7.225-48.911 10.634-88 10.225-58.633-.613-84.128-15.614-144-15.614-38.03 0-67.362 2.075-88 6.227V0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="rotate(-180 160 40)">
+        <mask id="voyf8hbzbc" fill="#fff">
+            <use xlink:href="#i15uuknfja"/>
+        </mask>
+        <use fill="url(#7qlq6bg4nb)" xlink:href="#i15uuknfja"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M336.5 -70L361 10 280 2z" mask="url(#voyf8hbzbc)" transform="rotate(29 320.5 -30)"/>
+        <circle fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" cx="232" cy="99" r="88" mask="url(#voyf8hbzbc)"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M102 5H135V14H102z" mask="url(#voyf8hbzbc)" transform="rotate(-12 118.5 9.5)"/>
+        <path fill="#FFF" fill-opacity=".5" fill-rule="nonzero" d="M39.053 37.004v-2.72c1.695-.174 3.026-.744 3.992-1.71.966-.966 1.45-2.224 1.45-3.773 0-.83-.128-1.557-.384-2.18-.255-.625-.624-1.181-1.107-1.669-.483-.487-1.076-.925-1.777-1.312-.702-.388-1.598-.8-2.687-1.238-1.09-.437-1.834-.866-2.235-1.285-.401-.42-.602-.975-.602-1.668 0-.747.205-1.333.615-1.757.41-.423.99-.635 1.737-.635.756 0 1.36.27 1.811.813.451.542.677 1.36.677 2.454h3.951c0-1.777-.456-3.224-1.367-4.34-.912-1.117-2.174-1.79-3.787-2.017V11h-2.188v2.926c-1.631.164-2.94.738-3.923 1.722-.985.985-1.477 2.247-1.477 3.788 0 .893.144 1.663.43 2.31.288.647.689 1.21 1.204 1.689.515.478 1.132.902 1.852 1.271.72.37 1.577.74 2.57 1.114.994.374 1.698.782 2.113 1.224.415.442.622 1.037.622 1.784 0 .72-.232 1.292-.697 1.716-.465.424-1.099.636-1.9.636-.967 0-1.707-.29-2.222-.868-.515-.58-.773-1.411-.773-2.496H31c0 1.869.513 3.366 1.538 4.492 1.025 1.125 2.472 1.788 4.34 1.989v2.707h2.175z" style="mix-blend-mode:soft-light" mask="url(#voyf8hbzbc)" transform="rotate(-13 37.747 24.002)"/>
+    </g>
+</svg>

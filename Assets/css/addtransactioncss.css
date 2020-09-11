@@ -164,14 +164,8 @@
   #food, #groceries, #bills, #entertainment, #clothing, #pet, #transport, #other {
     height: 32px;
   }
-  .categorylist {
-    height: 32px;
-    
-  }
-  .disabledImage{
-    cursor: not-allowed; 
-  }
-  .activeCategoryImage:active{
+
+  input[type=image]:active {
     transform: scale(1.2);
   }
 

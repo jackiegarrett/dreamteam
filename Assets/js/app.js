@@ -50,10 +50,6 @@ const toggleTransactionPage = (event) => {
   document.getElementById("transactionPageDisplay").style.display = "inline";
 };
 
-const preventDefault = () => {
-  event.preventDefault();
-}
-
 let selectCategory = "";
 //when user selects category
 const unfoldTransactionForm = (selectedCategory) => {
@@ -117,10 +113,6 @@ const buildHtml = () => {
   const listofCategory = JSON.parse(
     window.localStorage.getItem("listofCategory")
   );
-  if(!listofCategory || listofCategory==null)
-  {
-    buildBudgetData();
-  }
   console.log("listofCategory", listofCategory);
   let totalUsed = 0;
   let totalBudget = 0;
@@ -204,41 +196,6 @@ const buildBudgetData = () => {
   );
   window.localStorage.setItem("TotalBudget", 350);
 };
-
-const getLocalstorageData=()=>{
-  return JSON.parse(
-    window.localStorage.getItem("listofCategory")
-  );
-}
-
-const loadCategory=()=>{
-  let listofCategory=getLocalstorageData();
-  let rowsOfButtons=document.getElementById('rowsOfButtons');
-  for (let i = 0; i < listofCategory.length; i++) {
-    let rowdiv = document.createElement("div");
-    let img = document.createElement("INPUT");
-    img.classList.add('categorylist');
-    img.setAttribute("type", "image");
-    img.src = listofCategory[i].src;
-    img.value=listofCategory[i].category;
-    rowdiv.classList.add("row");
-    let lbl = document.createElement("label");
-    lbl.innerHTML=listofCategory[i].category;
-    if(listofCategory[i].used<listofCategory[i].budget){
-      img.setAttribute("onclick", "unfoldTransactionForm(event)");
-      img.classList.add('activeCategoryImage');
-    }
-    else{
-      img.setAttribute("onclick", "preventDefault()");
-      img.classList.add('disabledImage');
-      lbl.style.color = "red";
-    }
-    rowdiv.appendChild(img);
-    rowdiv.appendChild(lbl);
-    rowsOfButtons.appendChild(rowdiv);
-  }  
-}
-
 
 // const buildHtmlTransaction = () => {
 //   let addTransactionForm = document.getElementById("addTransactionForm");
