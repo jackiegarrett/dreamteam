@@ -1,9 +1,16 @@
 const visibility = () => {
-  var x = document.getElementById("password");
+  let x = document.getElementById("password");
+  const visibleYes = document.getElementById('visible-yes');
+  const visibleNo = document.getElementById('visible-no');
+
   if (x.type === "password") {
+    visibleNo.style.display = 'block';
+    visibleYes.style.display = 'none';
     x.type = "text";
   } else {
     x.type = "password";
+    visibleYes.style.display = 'block';
+    visibleNo.style.display = 'none';
   }
 };
 
