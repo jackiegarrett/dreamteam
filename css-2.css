@@ -1,6 +1,7 @@
 /* Media Queries */
 /* 320px */
 @media screen and (min-width: 320px) {
+
   #buttonContainer {
     margin-left: 80%;
     margin-top: 10%;
@@ -170,6 +171,11 @@
     display: flex;
     justify-content: center;
   }
+
+  #myCanvas {
+    margin-bottom: 5%;
+  }
+
   .donut {
     display: flex;
     justify-self: center;
@@ -274,6 +280,13 @@
   #donutContainer {
     display: flex;
     justify-content: flex-start;
+    justify-content: center;
+    margin-top: 15%;
+  }
+
+  #myCanvas {
+    position: relative;
+    margin-bottom: 0;
   }
 
   .donut {
@@ -333,6 +346,7 @@
     margin-right: 10px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   #buttonContainer {
     position: relative;
@@ -422,6 +436,17 @@
     height: 74px;
   }
 
+  #donutContainer {
+    position: absolute;
+    width: 20%;
+  }
+
+  #myCanvas {
+    position: relative;
+    margin-bottom: 75%;
+    margin-left: 10%;
+  }
+
   .donut {
     width: 250px;
     height: 250px;
@@ -429,19 +454,6 @@
     border-radius: 200px;
     position: absolute;
     margin-bottom: 5%;
-  }
-
-  .donut:before {
-    content: "";
-    width: 75px;
-    height: 75px;
-    display: block;
-    position: absolute;
-    top: 90px;
-    left: 85px;
-    border: 1px solid black;
-    border-radius: 200px;
-    background-color: white;
   }
 
   .header {
@@ -452,5 +464,11 @@
   }
   .gradient-logo {
     margin-left: 512px;
+  }
+}
+
+@media screen and (min-width:1400px) {
+  #myCanvas {
+    transform: scale(1.4)
   }
 }

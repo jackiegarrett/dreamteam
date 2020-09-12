@@ -113,6 +113,7 @@ const submitData = () => {
     console.log(database);
     window.localStorage.setItem("listofCategory", JSON.stringify(database));
   }
+
   newCategory = "";
 
   alert("Your transaction has been added.");
@@ -283,15 +284,17 @@ const drawPieSlice = (
   ctx.closePath();
   ctx.fill();
 };
-//myVinyls is the array that is being referenced in 288. Will have to change to reflect dashboard data.
+
 var amountUsedData = {};
 
-// groceries budget = 200 - 105 = 95
-// bills budget = 100 - 55 =
 const pieChart = (options) => {
   let canvas = options.canvas;
   let ctx = canvas.getContext("2d");
   let colors = options.colors;
+
+  canvas.width = 250;
+  canvas.height = 250;
+
   console.log("canvas", canvas.width / 2);
   var total_value = 0;
   var color_index = 0;
@@ -300,9 +303,11 @@ const pieChart = (options) => {
     total_value += val;
   }
   var start_angle = 0;
+
   for (categ in options.data) {
     val = options.data[categ];
     let slice_angle = (2 * Math.PI * val) / total_value;
+    
     drawPieSlice(
       ctx,
       canvas.width / 2,
@@ -315,7 +320,34 @@ const pieChart = (options) => {
     start_angle += slice_angle;
     color_index++;
   }
+
+  if (options.doughnutHoleSize2){
+    drawPieSlice(
+        ctx,
+        canvas.width/2,
+        canvas.height/2,
+        options.doughnutHoleSize2 * Math.min(canvas.width/2,canvas.height/2),
+        0,
+        2 * Math.PI,
+        "#ffffff",
+    );
+  }
+
+  if (options.doughnutHoleSize){
+    drawPieSlice(
+        ctx,
+        canvas.width/2,
+        canvas.height/2,
+        options.doughnutHoleSize * Math.min(canvas.width/2,canvas.height/2),
+        0,
+        2 * Math.PI,
+        "#ffffff",
+        ctx.globalAlpha = .5,
+    );
+  }
 };
+
+
 const drawIt = () => {
   let listofCategory = JSON.parse(
     window.localStorage.getItem("listofCategory")
@@ -328,10 +360,12 @@ const drawIt = () => {
     colorArray.push(listofCategory[cat].color);
   }
   console.log(colorArray);
+
   pieChart({
     canvas: document.getElementById("myCanvas"),
-    //Update the variable from which it is drawn and make the colors match the Zeplin colors. How to make the color/difference match up?
     data: amountUsedData,
     colors: colorArray,
+    doughnutHoleSize:0.5,
+    doughnutHoleSize2: 0.4
   });
 };

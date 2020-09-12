@@ -39,7 +39,7 @@
   }
 
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 320px) {
     #navBar {
       display: flex;
       justify-content: space-between;
@@ -49,21 +49,21 @@
       margin-left: 5%;
       margin-right: 5%;
     }
-  }
 
-  #topNav {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-bottom: 1%;
-    border-bottom: 1px solid #eeeeee;
-    height: 10vh;
-  }
+    #topNav {
+      display: flex;
+      justify-self: center;
+      align-items: center;
+      margin-left: 5%;
+      margin-right: 5%;
+      padding-bottom: 1%;
+      border-bottom: 1px solid #eeeeee;
+      height: 10vh;
+    }
 
-  .BG {
-    display: none;
+    .BG {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -114,10 +114,8 @@
     padding-bottom: 5%;
   }
 
-  @media screen and (min-width: 768px) {
-    #chooseCategoryTitle, #moreCategoriesTitle, #setWeeklyBudgetTitle, #amountSpentTitle, #moneySpentOnTitle, #cancel {
+  #chooseCategoryTitle, #moreCategoriesTitle, #setWeeklyBudgetTitle, #amountSpentTitle, #moneySpentOnTitle, #cancel {
       font-size: 14px;
-    }
   }
 
   form {
@@ -128,8 +126,8 @@
 
   @media screen and (min-width: 768px) {
   form {
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
   }
 
@@ -150,8 +148,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
+
+
 
   .row {
     width: 40px;
