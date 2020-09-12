@@ -123,10 +123,9 @@
   .entertainment-cat:hover {
     position: static;
     background-color: #f4f4f4;
-    padding-right: 5px;
     border-radius: 5px;
     align-content: center;
-    padding-right: 3%;
+    padding-right: -5%;
   }
 
   .groceries-cat {
