@@ -1,45 +1,72 @@
 /* Media Queries */
 /* 320px */
 @media screen and (min-width: 320px) {
-
-  #buttonContainer {
-    margin-left: 80%;
-    margin-top: 10%;
-  }
-
-  button {
-    padding: 20px;
-    border-radius: 100%;
-    border: none;
-    background-color: white;
-    box-shadow: 0px 0px 40px 0px rgba(80, 135, 236, 0.5);
-    outline: none;
-  }
-
-  button:active {
-    transform: scale(1.4);
-  }
-
   .main-container2 {
     display: flex;
     flex-direction: column;
     margin: auto;
     height: 100%;
-    width: 80%;
+    width: 90%;
     bottom: 0;
+    /* background-color: lightcyan; */
   }
+
+  .food-cat {
+    padding: 8px 32px;
+  }
+
+  .groceries-cat {
+    padding: 8px 32px;
+  }
+
+  .bills-cat {
+    padding: 8px 32px;
+  }
+
+  .entertainment-cat {
+    padding: 8px 32px;
+  }
+  
+  #buttonContainer {
+    width: 100%;
+    height: 64px;
+    position: relative;
+  }
+
+  button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);
+    position: absolute;
+    right: 0px;
+    margin-top: 16px;
+  }
+
+  button:hover {
+    transform: scale(1.4);
+    box-shadow: 0px 8px 30px 0px rgba(80, 135, 236);
+    transition: .1s;
+    cursor: pointer;
+  }
+
   .bg2 {
     width: 320px;
     transform: rotate(-360deg);
     position: absolute;
     margin-top: 70px;
   }
+
   .bg3 {
     display: none;
   }
+
   .bg4 {
     display: none;
   }
+
   #navBar {
     display: flex;
     justify-content: space-between;
@@ -48,24 +75,28 @@
     padding-top: 1%;
     padding-bottom: 13%;
   }
+
   .menu {
     width: 24px;
     height: 24px;
     object-fit: contain;
     margin-left: 16px;
   }
+
   .gradient-logo {
     width: 99px;
     height: 24px;
     object-fit: contain;
     margin-left: 65px;
   }
+
   .profile-pic {
     width: 32px;
     height: 32px;
     margin-left: 60px;
     border-radius: 32px;
   }
+
   .budget-text {
     font-family: Roboto;
     text-align: center;
@@ -79,6 +110,7 @@
     text-align: center;
     color: #888888;
   }
+
   .budget {
     margin-top: 20px;
     font-family: Roboto;
@@ -133,37 +165,31 @@
     align-items: center;
     margin-bottom: 8px;
   }
+
   .bills-cat {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
   }
+
   .entertainment-cat {
     display: flex;
     align-items: center;
   }
+
   .push {
     margin-left: auto;
   }
+
   .color {
     color: gray;
   }
+
   .number {
     font-family: Roboto;
     font-weight: bold;
     color: black;
     font-size: 40px;
-  }
-  .bottom {
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: white;
   }
 
   #donutContainer {
@@ -186,11 +212,13 @@
     border-radius: 200px;
     background-color: #5087ec;
   }
+
   .icon {
     width: 32px;
     height: 32px;
     margin-right: 10px;
   }
+
   .donut:before {
     content: "";
     width: 50px;
@@ -233,217 +261,88 @@
     width: 100%;
   }
 }
+
+
+
 @media screen and (min-width: 768px) {
-  #buttonContainer {
-    position: relative;
-    margin-left: 80%;
-    top: -100px;
-  }
-
   button {
-    transform: scale(1.5);
-  }
-
-  button:active {
-    transform: scale(2);
-  }
-
-  #navBar {
-    display: flex;
-    justify-content: space-between;
-    left: 0;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-bottom: 5%;
-  }
-
-  #pageWrapper {
-    display: flex;
-    padding-bottom: 30%;
-  }
-
-  .main-container2 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .header {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 15px;
-    align-items: center;
+    margin-top: -16px;
   }
 
   #donutContainer {
-    display: flex;
-    justify-content: flex-start;
-    justify-content: center;
-    margin-top: 15%;
+    margin-top: 16px;
   }
 
-  #myCanvas {
-    position: relative;
-    margin-bottom: 0;
-  }
-
-  .donut {
-    margin: auto;
-    margin-top: 10%;
-  }
-
-  .bg2 {
-    display: none;
-  }
-  .bg3 {
-    display: flex;
-    position: absolute;
-    margin-top: 75px;
-  }
-  .bottom {
-    font-family: Roboto;
-    font-size: 14px;
-    color: white;
-    position: relative;
-    margin-top: 125px;
-    margin-left: 18px;
-  }
   .categories {
     display: flex;
     justify-content: center;
     justify-self: center;
-    margin-left: 5%;
-
-    padding-bottom: 10%;
-    padding-top: 5%;
-    width: 90%;
-    height: 520px;
+    margin-top: 24px;
+    width: 100%;
     border-radius: 8px;
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
     border: solid 1px lightgrey;
     background-color: white;
   }
+
   .food-cat {
-    padding: 3%;
-    display: flex;
+    padding: 8px 32px;
   }
+
   .groceries-cat {
-    padding: 3%;
-    display: flex;
+    padding: 8px 32px;
   }
+
   .bills-cat {
-    padding: 3%;
-    display: flex;
+    padding: 8px 32px;
   }
+
   .entertainment-cat {
-    padding: 3%;
-    display: flex;
-    margin-bottom: 10%;
+    padding: 8px 32px 32px 32px;
   }
+
   .push {
     margin-right: 10px;
   }
 }
 
+
+
 @media screen and (min-width: 1024px) {
-  #buttonContainer {
-    position: relative;
-    margin-left: 80%;
-    margin-top: 100px;
-  }
-
-  button {
-    transform: scale(2.5);
-  }
-
-  #navBar {
-    display: flex;
-    justify-content: space-between;
-    left: 0;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .main-container2 {
-    width: 100%;
-  }
-  .bg3 {
-    display: flex;
-    position: absolute;
-    margin-top: 75px;
-  }
-  .bottom {
-    width: 1024px;
-    height: 32px;
-    font-family: Roboto;
-    font-size: 14px;
-    color: white;
-    position: absolute;
-    margin-top: 125px;
-    margin-left: 18px;
-  }
-  .bg2 {
-    display: none;
-  }
-  .bg3 {
-    display: none;
-  }
-  .bg4 {
-    display: flex;
-    position: absolute;
-    margin-top: 75px;
-  }
   .categories {
-    justify-self: center;
-    width: 85%;
-    margin-top: 3%;
-    margin-right: 10%;
-    padding-left: 3%;
-    padding-bottom: 2%;
-    border-radius: 8px;
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
+    padding: 40px 0px;
   }
 
   .food-cat {
-    display: flex;
     margin-left: 30%;
-    margin-right: 30px;
-    height: 74px;
-    margin-bottom: 0;
+    margin-right: 32px;
   }
+
   .groceries-cat {
-    display: flex;
     margin-left: 30%;
-    margin-right: 30px;
-    height: 74px;
-    margin-bottom: 0;
+    margin-right: 32px;
   }
+
   .bills-cat {
-    display: flex;
     margin-left: 30%;
-    margin-right: 30px;
-    height: 74px;
-    margin-bottom: 0;
+    margin-right: 32px;
   }
+
   .entertainment-cat {
-    display: flex;
     margin-left: 30%;
-    margin-right: 30px;
-    margin-bottom: 0;
-    height: 74px;
+    margin-right: 32px;
   }
 
   #donutContainer {
     position: absolute;
     width: 20%;
+    margin-left: 40px;
+    margin-top: 15%;
   }
 
   #myCanvas {
     position: relative;
-    margin-bottom: 75%;
+    margin-bottom:75%;
     margin-left: 10%;
   }
 
@@ -459,16 +358,12 @@
   .header {
     display: flex;
   }
+
   .profile-pic {
     margin-left: 930px;
   }
+
   .gradient-logo {
     margin-left: 512px;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  #myCanvas {
-    transform: scale(1.4)
   }
 }

@@ -20,7 +20,7 @@ const login = (event) => {
   let formEmail = document.getElementById("email").value;
   let formPassword = document.getElementById("password").value;
   console.log();
-  if (formEmail === "test@gmail.com" && formPassword === "12345678") {
+  if (formEmail === "test@gmail.com" && formPassword === "1234") {
     window.open("dashboard.html", "_self");
   } else {
     document.getElementById("email").value = "";
