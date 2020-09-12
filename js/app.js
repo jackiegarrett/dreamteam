@@ -4,13 +4,13 @@ const visibility = () => {
   const visibleNo = document.getElementById('visible-no');
 
   if (x.type === "password") {
-    visibleNo.style.display = 'block';
-    visibleYes.style.display = 'none';
+    visibleNo.style.display = 'none';
+    visibleYes.style.display = 'block';
     x.type = "text";
   } else {
     x.type = "password";
-    visibleYes.style.display = 'block';
-    visibleNo.style.display = 'none';
+    visibleYes.style.display = 'none';
+    visibleNo.style.display = 'block';
   }
 };
 

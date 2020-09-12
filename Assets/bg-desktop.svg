@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="808" viewBox="0 0 1024 808">
+    <defs>
+        <linearGradient id="6xux6mmhzb" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#13D3D5"/>
+            <stop offset="100%" stop-color="#5045AB"/>
+        </linearGradient>
+        <path id="rta5lw2dla" d="M0 0h1024v749.32c-62.65 40.186-156.517 59.626-281.6 58.319-187.625-1.962-269.208-101.166-460.8-101.166C159.907 706.473 66.04 721.648 0 752V0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="82dmey0iec" fill="#fff">
+            <use xlink:href="#rta5lw2dla"/>
+        </mask>
+        <use fill="url(#6xux6mmhzb)" xlink:href="#rta5lw2dla"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M1076.8 304L1155.2 560 896 534.4z" mask="url(#82dmey0iec)" transform="rotate(29 1025.6 432)"/>
+        <circle fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" cx="176" cy="428.8" r="44.8" mask="url(#82dmey0iec)"/>
+        <circle fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" cx="38.4" r="281.6" mask="url(#82dmey0iec)"/>
+        <circle fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" cx="742.4" cy="844.8" r="281.6" mask="url(#82dmey0iec)"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M584 -3.2L672 137.6 496 137.6z" mask="url(#82dmey0iec)" transform="rotate(137 584 67.2)"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M326.4 544H432V572.8H326.4z" mask="url(#82dmey0iec)" transform="rotate(-12 379.2 558.4)"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M918.4 22.4H1059.2V99.19999999999999H918.4z" mask="url(#82dmey0iec)" transform="rotate(34 988.8 60.8)"/>
+        <path fill="#FFF" fill-opacity=".5" fill-rule="nonzero" d="M124.969 646.413v-8.707c5.425-.554 9.683-2.377 12.775-5.469 3.091-3.091 4.637-7.116 4.637-12.074 0-2.655-.408-4.98-1.225-6.979-.816-1.998-1.998-3.777-3.543-5.337-1.546-1.56-3.442-2.96-5.688-4.2-2.246-1.24-5.111-2.56-8.597-3.96-3.485-1.4-5.87-2.77-7.153-4.112-1.283-1.342-1.925-3.12-1.925-5.338 0-2.391.656-4.265 1.969-5.621 1.312-1.357 3.164-2.035 5.556-2.035 2.42 0 4.353.868 5.797 2.603 1.444 1.736 2.166 4.354 2.166 7.854h12.643c0-5.688-1.458-10.318-4.375-13.891-2.916-3.573-6.956-5.724-12.118-6.453V563.2h-7v9.362c-5.221.525-9.407 2.363-12.557 5.513-3.15 3.15-4.725 7.19-4.725 12.119 0 2.858.46 5.323 1.378 7.394.92 2.07 2.202 3.871 3.85 5.403 1.648 1.53 3.624 2.887 5.928 4.068 2.305 1.182 5.046 2.37 8.225 3.566 3.18 1.196 5.433 2.501 6.76 3.916 1.327 1.414 1.99 3.317 1.99 5.709 0 2.304-.743 4.134-2.23 5.49-1.488 1.357-3.515 2.035-6.082 2.035-3.092 0-5.461-.926-7.11-2.778-1.647-1.852-2.471-4.514-2.471-7.984H99.2c0 5.979 1.64 10.77 4.922 14.371 3.281 3.602 7.911 5.724 13.89 6.366v8.663h6.957z" style="mix-blend-mode:soft-light" mask="url(#82dmey0iec)" transform="rotate(-13 120.79 604.806)"/>
+        <path fill="#FFF" fill-opacity=".5" fill-rule="nonzero" d="M832.681 286.163c3.85 0 7.584-.423 11.2-1.27l-1.575-10.587c-2.479.904-5.25 1.357-8.312 1.357-4.521 0-7.853-1.08-9.997-3.238s-3.289-5.381-3.434-9.669h14.656v-6.65h-14.657v-5.425h14.657v-6.65H820.65c.788-8.429 5.308-12.644 13.563-12.644 2.654 0 5.352.467 8.093 1.4l1.575-10.63c-3.82-.905-7.262-1.357-10.325-1.357-7.641 0-13.774 2.034-18.397 6.103-4.623 4.069-7.182 9.778-7.678 17.128H800v6.65h7.394v5.425H800v6.65h7.394c.233 7.35 2.588 13.089 7.065 17.216 4.477 4.127 10.551 6.19 18.222 6.19z" style="mix-blend-mode:soft-light" mask="url(#82dmey0iec)" transform="rotate(10 821.94 253.481)"/>
+        <path fill="#FFF" fill-opacity=".5" fill-rule="nonzero" style="mix-blend-mode:soft-light" d="M385.169 159.7L385.169 147.537 397.769 147.537 397.769 139.925 385.169 139.925 385.169 134.894 397.769 134.894 397.769 127.237 388.231 127.237 402.319 96 388.625 96 378.825 120.675 368.981 96 355.2 96 369.331 127.237 358.656 127.237 358.656 134.894 372.044 134.894 372.044 139.925 358.656 139.925 358.656 147.537 372.044 147.537 372.044 159.7z" mask="url(#82dmey0iec)" transform="rotate(-7 378.76 127.85)"/>
+    </g>
+</svg>

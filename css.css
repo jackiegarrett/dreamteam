@@ -10,9 +10,24 @@ body {
     margin: 0px;
 }
 
-.BG {
+.main-container {
+  position: relative;
+  height: 100vh;
+}
+
+.BG-mobile {
   width: 100%;
   margin-bottom: 24px;
+}
+
+.BG-tablet {
+  display: none;
+  width: 100%;
+}
+
+.BG-desktop {
+  display: none;
+  width: 100%;
 }
 
 #fundiImage {
@@ -75,6 +90,10 @@ body {
   transform: translateY(-50%);
 }
 
+#visible-yes {
+  display: none;
+}
+
 #errorMsg {
   display: none;
   display: flex;
@@ -91,7 +110,7 @@ body {
   background-color: #333;
   color: white;
   border-style: none;
-  margin-bottom: 16px;
+  margin: 32px 0px 16px 0px;
 }
 
 .submit:hover {
@@ -111,6 +130,59 @@ a:hover {
 
 
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 678px) {
+  .BG-mobile {
+    display: none;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .BG-tablet {
+    display: block;
+    width: 100%;
+  }
+  
+  .BG-desktop {
+    display: none;
+    width: 100%;
+  }
 
-} */
+  .group-2 {
+    height: 64px;
+  }
+
+  .login-container {
+    width: 600px;
+    padding: 40px 32px 16px 32px;
+    border-radius: 8px;
+    box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    position: absolute;
+    top: 35%;
+    transform: translateY(-35%);
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .BG-mobile {
+    display: none;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .BG-tablet {
+    display: none;
+    width: 100%;
+  }
+  
+  .BG-desktop {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -300px;
+  }
+}

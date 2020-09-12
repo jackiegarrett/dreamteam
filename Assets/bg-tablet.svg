@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="606" viewBox="0 0 768 606">
+    <defs>
+        <linearGradient id="cgrfu632ob" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#13D3D5"/>
+            <stop offset="100%" stop-color="#5045AB"/>
+        </linearGradient>
+        <path id="3dkkbsr04a" d="M0 0h768v561.99c-46.987 30.14-117.388 44.72-211.2 43.739-140.719-1.471-201.906-75.874-345.6-75.874-91.27 0-161.67 11.381-211.2 34.145V0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="z0gtlrw87c" fill="#fff">
+            <use xlink:href="#3dkkbsr04a"/>
+        </mask>
+        <use fill="url(#cgrfu632ob)" xlink:href="#3dkkbsr04a"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M807.6 228L866.4 420 672 400.8z" mask="url(#z0gtlrw87c)" transform="rotate(29 769.2 324)"/>
+        <circle fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" cx="132" cy="321.6" r="33.6" mask="url(#z0gtlrw87c)"/>
+        <circle fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" cx="28.8" r="211.2" mask="url(#z0gtlrw87c)"/>
+        <circle fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" cx="556.8" cy="633.6" r="211.2" mask="url(#z0gtlrw87c)"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M438 -2.4L504 103.2 372 103.2z" mask="url(#z0gtlrw87c)" transform="rotate(137 438 50.4)"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M244.8 408H324V429.6H244.8z" mask="url(#z0gtlrw87c)" transform="rotate(-12 284.4 418.8)"/>
+        <path fill="#FFF" fill-opacity=".5" style="mix-blend-mode:soft-light" d="M688.8 16.8H794.4V74.4H688.8z" mask="url(#z0gtlrw87c)" transform="rotate(34 741.6 45.6)"/>
+        <path fill="#FFF" fill-opacity=".5" fill-rule="nonzero" d="M93.727 484.81v-6.53c4.068-.416 7.262-1.783 9.58-4.102 2.32-2.319 3.479-5.337 3.479-9.056 0-1.99-.306-3.735-.919-5.234-.612-1.498-1.498-2.833-2.658-4.003-1.159-1.17-2.58-2.22-4.265-3.15-1.685-.93-3.834-1.92-6.448-2.97-2.614-1.05-4.402-2.077-5.365-3.084-.962-1.006-1.444-2.34-1.444-4.003 0-1.794.493-3.2 1.477-4.216.984-1.017 2.373-1.526 4.167-1.526 1.816 0 3.265.65 4.348 1.952 1.083 1.302 1.624 3.265 1.624 5.89h9.483c0-4.266-1.094-7.738-3.281-10.418-2.188-2.68-5.218-4.293-9.09-4.84v-7.12h-5.25v7.022c-3.915.394-7.054 1.772-9.417 4.134-2.362 2.363-3.543 5.392-3.543 9.09 0 2.143.344 3.991 1.033 5.545.69 1.553 1.652 2.904 2.888 4.052 1.236 1.148 2.718 2.166 4.446 3.052 1.728.885 3.784 1.777 6.169 2.674 2.384.897 4.074 1.876 5.07 2.936.994 1.061 1.492 2.489 1.492 4.283 0 1.728-.558 3.1-1.673 4.117-1.116 1.018-2.636 1.526-4.561 1.526-2.319 0-4.096-.694-5.332-2.083-1.236-1.39-1.854-3.385-1.854-5.989H74.4c0 4.485 1.23 8.078 3.691 10.78 2.461 2.7 5.934 4.292 10.418 4.774v6.496h5.218z" style="mix-blend-mode:soft-light" mask="url(#z0gtlrw87c)" transform="rotate(-13 90.593 453.605)"/>
+        <path fill="#FFF" fill-opacity=".5" fill-rule="nonzero" d="M624.51 214.622c2.888 0 5.688-.317 8.4-.952l-1.18-7.94c-1.86.678-3.938 1.017-6.235 1.017-3.39 0-5.89-.81-7.497-2.428-1.608-1.619-2.467-4.036-2.576-7.252h10.992v-4.987h-10.992v-4.07h10.992v-4.987h-10.927c.591-6.321 3.982-9.482 10.172-9.482 1.991 0 4.014.35 6.07 1.05l1.182-7.974c-2.866-.678-5.447-1.017-7.744-1.017-5.731 0-10.33 1.526-13.797 4.577-3.468 3.052-5.387 7.334-5.76 12.846H600v4.988h5.545v4.069H600v4.987h5.545c.175 5.513 1.942 9.817 5.3 12.912 3.357 3.095 7.913 4.643 13.666 4.643z" style="mix-blend-mode:soft-light" mask="url(#z0gtlrw87c)" transform="rotate(10 616.455 190.11)"/>
+        <path fill="#FFF" fill-opacity=".5" fill-rule="nonzero" style="mix-blend-mode:soft-light" d="M288.877 119.775L288.877 110.653 298.327 110.653 298.327 104.944 288.877 104.944 288.877 101.17 298.327 101.17 298.327 95.428 291.173 95.428 301.739 72 291.469 72 284.119 90.506 276.736 72 266.4 72 276.998 95.428 268.992 95.428 268.992 101.17 279.033 101.17 279.033 104.944 268.992 104.944 268.992 110.653 279.033 110.653 279.033 119.775z" mask="url(#z0gtlrw87c)" transform="rotate(-7 284.07 95.887)"/>
+    </g>
+</svg>
