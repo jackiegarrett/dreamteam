@@ -302,7 +302,6 @@
     margin-top: 75px;
   }
   .bottom {
-    width: 100%;
     font-family: Roboto;
     font-size: 14px;
     color: white;
@@ -315,7 +314,7 @@
     justify-content: center;
     justify-self: center;
     margin-left: 5%;
-    margin-right: 10%;
+
     padding-bottom: 10%;
     padding-top: 5%;
     width: 90%;

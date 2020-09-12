@@ -361,7 +361,7 @@ const drawIt = () => {
   }
   console.log(colorArray);
 
-  pieChart({
+  pieChart({ 
     canvas: document.getElementById("myCanvas"),
     data: amountUsedData,
     colors: colorArray,
