@@ -1,13 +1,13 @@
 *,
 *:before,
 *:after {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-weight: 400;
 }
 
 body {
-    margin: 0px;
+  margin: 0px;
 }
 
 .main-container {
@@ -47,7 +47,6 @@ body {
   padding: 0px 32px;
 }
 
-
 .email {
   font-size: 12px;
   letter-spacing: 1.71px;
@@ -75,15 +74,16 @@ body {
 }
 
 .rectangle:hover {
-  border: solid 2px  rgb(80, 135, 236);
-  transition: .3s;
+  border: solid 2px rgb(80, 135, 236);
+  transition: 0.3s;
 }
 
 #passwordContainer {
   position: relative;
 }
 
-#visible-yes, #visible-no {
+#visible-yes,
+#visible-no {
   position: absolute;
   right: 24px;
   top: 50%;
@@ -112,6 +112,7 @@ body {
   color: white;
   border-style: none;
   margin: 32px 0px 16px 0px;
+  outline: none;
 }
 
 .submit:hover {
@@ -129,20 +130,18 @@ a:hover {
   color: #5087ec;
 }
 
-
-
 @media screen and (min-width: 678px) {
   .BG-mobile {
     display: none;
     width: 100%;
     margin-bottom: 24px;
   }
-  
+
   .BG-tablet {
     display: block;
     width: 100%;
   }
-  
+
   .BG-desktop {
     display: none;
     width: 100%;
@@ -162,11 +161,9 @@ a:hover {
     top: 35%;
     transform: translateY(-35%);
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
   }
 }
-
-
 
 @media screen and (min-width: 1024px) {
   .BG-mobile {
@@ -174,12 +171,12 @@ a:hover {
     width: 100%;
     margin-bottom: 24px;
   }
-  
+
   .BG-tablet {
     display: none;
     width: 100%;
   }
-  
+
   .BG-desktop {
     display: block;
     position: absolute;
