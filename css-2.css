@@ -1,3 +1,8 @@
+
+#myCanvas, #donutContainer {
+  display: none;
+}
+
 /* Media Queries */
 /* 320px */
 @media screen and (min-width: 320px) {
@@ -305,7 +310,6 @@
     margin-right: 10px;
   }
 }
-
 
 
 @media screen and (min-width: 1024px) {

@@ -161,6 +161,21 @@ const buildHtml = () => {
       spanColor.style.color = "red";
     }
   }
+
+  if (totalUsed === 0) {
+    document.querySelector(".food-cat").style.marginLeft = "32px";
+    document.querySelector(".groceries-cat").style.marginLeft = "32px";
+    document.querySelector(".bills-cat").style.marginLeft = "32px";
+    document.querySelector(".entertainment-cat").style.marginLeft = "32px";
+  } else {
+    document.querySelector(".food-cat").style.marginLeft = "30%";
+    document.querySelector(".groceries-cat").style.marginLeft = "30%";
+    document.querySelector(".bills-cat").style.marginLeft = "30%";
+    document.querySelector(".entertainment-cat").style.marginLeft = "30%";
+    document.getElementById("donutContainer").style.display = "inline";
+    document.getElementById("myCanvas").style.display = "inline";
+  }
+
   document.getElementById("totalBudgetAvailable").innerHTML =
     "$" + (totalBudget - totalUsed).toFixed(2);
 
@@ -197,7 +212,7 @@ const buildBudgetData = () => {
         color: "#5087ec",
       },
       {
-        category: "Entertain",
+        category: "Entertainment",
         used: 0,
         budget: 50,
         class: "entertainment-cat",
@@ -230,10 +245,8 @@ const loadCategory=()=>{
     img.src = listofCategory[i].src;
     img.value=listofCategory[i].category;
     rowdiv.classList.add("row");
-    
     let lbl = document.createElement("label");
     lbl.innerHTML=listofCategory[i].category;
-
     if(listofCategory[i].used<listofCategory[i].budget){
       img.setAttribute("onclick", "unfoldTransactionForm(event)");
       img.classList.add('activeCategoryImage');

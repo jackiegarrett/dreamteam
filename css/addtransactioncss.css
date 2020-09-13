@@ -32,8 +32,6 @@
     padding: 0px 24px;
   }
 
-
-
   @media screen and (min-width: 320px) {
     #navBar {
       display: flex;
