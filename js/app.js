@@ -111,8 +111,6 @@ const submitData = () => {
   }
 
   newCategory = "";
-
-  alert("Your transaction has been added.");
   window.location = "dashboard.html";
 };
 
