@@ -26,23 +26,6 @@ body {
     height: 100%;
     width: 90%;
     bottom: 0;
-    /* background-color: lightcyan; */
-  }
-
-  .food-cat {
-    padding: 8px 32px;
-  }
-
-  .groceries-cat {
-    padding: 8px 32px;
-  }
-
-  .bills-cat {
-    padding: 8px 32px;
-  }
-
-  .entertainment-cat {
-    padding: 8px 32px;
   }
 
   #buttonContainer {
@@ -162,15 +145,15 @@ body {
   }
 
   .categories {
-    padding-top: 3%;
+    padding-top: 24px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-self: center;
-    justify-content: space-between;
-    font-family: Roboto;
-    font-size: 16px;
     color: #333333;
+  }
+
+  .category {
+    padding: 8px 32px;
   }
 
   .food-cat {
@@ -228,8 +211,9 @@ body {
   }
 
   #donutContainer {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin: auto;
   }
 
   #myCanvas {

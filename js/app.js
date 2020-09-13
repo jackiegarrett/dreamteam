@@ -165,10 +165,6 @@ const buildHtml = () => {
     document.querySelector(".bills-cat").style.marginLeft = "32px";
     document.querySelector(".entertainment-cat").style.marginLeft = "32px";
   } else {
-    document.querySelector(".food-cat").style.marginLeft = "30%";
-    document.querySelector(".groceries-cat").style.marginLeft = "30%";
-    document.querySelector(".bills-cat").style.marginLeft = "30%";
-    document.querySelector(".entertainment-cat").style.marginLeft = "30%";
     document.getElementById("donutContainer").style.display = "inline";
     document.getElementById("myCanvas").style.display = "inline";
   }
