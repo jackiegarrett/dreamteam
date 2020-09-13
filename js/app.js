@@ -420,7 +420,12 @@ const updateBudget = () => {
   for (let i = 0; i < database.length; i++) {
     total += (database[i].budget - database[i].used);
   }
-  totalElement.innerHTML = `$${parseInt(total, 10).toFixed(2)}`;
+  if (total > 0) {
+    totalElement.innerHTML = `$${parseInt(total, 10).toFixed(2)}`;
+  } else {
+    totalElement.innerHTML = '$0.00';
+  }
+  
   // change color if necessary
   if (database[match].budget < database[match].used) {
     lineItemBudget.style.color = 'red';
