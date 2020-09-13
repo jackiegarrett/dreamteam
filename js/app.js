@@ -20,7 +20,7 @@ const login = (event) => {
   let formEmail = document.getElementById("email").value;
   let formPassword = document.getElementById("password").value;
   console.log();
-  if (formEmail === "test@gmail.com" && formPassword === "12345678") {
+  if (formEmail === "test@gmail.com" && formPassword === "1234") {
     window.open("dashboard.html", "_self");
   } else {
     document.getElementById("email").value = "";
@@ -197,7 +197,7 @@ const buildBudgetData = () => {
         color: "#5087ec",
       },
       {
-        category: "Entertain",
+        category: "Entertainment",
         used: 0,
         budget: 50,
         class: "entertainment-cat",
@@ -230,10 +230,8 @@ const loadCategory=()=>{
     img.src = listofCategory[i].src;
     img.value=listofCategory[i].category;
     rowdiv.classList.add("row");
-    
     let lbl = document.createElement("label");
     lbl.innerHTML=listofCategory[i].category;
-
     if(listofCategory[i].used<listofCategory[i].budget){
       img.setAttribute("onclick", "unfoldTransactionForm(event)");
       img.classList.add('activeCategoryImage');
