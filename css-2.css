@@ -1,3 +1,16 @@
+*,
+*:before,
+*:after {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
 
 #myCanvas, #donutContainer {
   display: none;
@@ -38,7 +51,7 @@
     position: relative;
   }
 
-  button {
+  #addButton {
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -50,11 +63,27 @@
     margin-top: 16px;
   }
 
-  button:hover {
+  #addButton:hover {
     transform: scale(1.4);
     box-shadow: 0px 8px 30px 0px rgba(80, 135, 236);
     transition: .1s;
     cursor: pointer;
+  }
+
+  .textSize {
+    border: solid 2px white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--Charcoal);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .textSize:hover {
+    border: solid 2px rgba(80, 135, 236);
+
   }
 
   .bg2 {
@@ -237,17 +266,6 @@
     background-color: white;
   }
 
-  html {
-    width: 100%;
-    min-height: 100vh;
-  }
-
-  body {
-    margin: 0;
-    position: relative;
-    min-height: 100vh;
-  }
-
   #pageWrapper {
     display: flex;
     padding-bottom: 35%;
@@ -259,12 +277,94 @@
   }
 
   .BG {
+    width: 100%;
     display: inline;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
   }
+
+  .dark-overlay {
+    height: 100vh;
+    width: 100vw;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modal {
+    width: 288px;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#remove-header {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 8px 0px;
+    color: #333;
+}
+
+#remove-underline {
+    width: 120px;
+    height: 2px;
+    background-color: #5087ec;
+    margin-bottom: 16px;
+}
+
+#remove-copy {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 32px;
+}
+
+#remove-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #999;
+    margin-bottom: 24px;
+}
+
+.modalButton {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 100px;
+}
+
+#submit-new-budget {
+    margin-bottom: 24px;
+    border-style: none;
+    background-color: #333;
+    color: white;
+}
+
+#submit-new-budget:hover {
+    background-color: #5087ec;
+    cursor: pointer;
+}
+
+#cancel-new-budget {
+    background-color: white;
+    border: solid 2px #333;
+    color: #333;
+}
+
+#cancel-new-budget:hover {
+    background-color: #ff2f64;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 }
 
 
@@ -308,6 +408,10 @@
 
   .push {
     margin-right: 10px;
+  }
+
+  .modal {
+    width: 440px;
   }
 }
 

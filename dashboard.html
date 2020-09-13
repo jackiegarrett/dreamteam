@@ -11,6 +11,7 @@
     />
     <script src="./js/app.js"></script>
   </head>
+
   <body onload="buildHtml()">
     <div id="pageWrapper">
       <div class="main-container2">
@@ -37,6 +38,23 @@
           <img src="Assets/bg-copy.svg" class="BG" />
         </div>
       </div>
+      <div class="dark-overlay">
+        <div class="modal">
+            <h2 id="remove-header">Edit Budget?</h2>
+            <div id="remove-underline"></div>
+            <p id="remove-copy">What would you like your new budget to be?</p>
+            <form id="editBudgetForm">
+              <input
+                id="budgetAmount"
+                name="budgetAmount"
+                class="textSize"
+              />
+              <div id="remove-separator"></div>
+              <button class="modalButton" id="submit-new-budget">Submit</button>  
+            </form>
+            <button class="modalButton" id="cancel-new-budget">Cancel</button>
+        </div>
+    </div>
     </div>
   </body>
 </html>

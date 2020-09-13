@@ -1,3 +1,4 @@
+let editId = '';
 const visibility = () => {
   let x = document.getElementById("password");
   const visibleYes = document.getElementById('visible-yes');
@@ -19,7 +20,6 @@ const login = (event) => {
   document.getElementById("errorMsg").style.display = "none";
   let formEmail = document.getElementById("email").value;
   let formPassword = document.getElementById("password").value;
-  console.log();
   if (formEmail === "test@gmail.com" && formPassword === "12345678") {
     window.open("dashboard.html", "_self");
   } else {
@@ -89,7 +89,6 @@ const submitData = () => {
   ];
 
   event.preventDefault();
-  console.log(selectCategory);
   let database = JSON.parse(window.localStorage.getItem("listofCategory"));
   if (newCategory) {
     let budgetInput = document.getElementById("budgetInput");
@@ -106,11 +105,8 @@ const submitData = () => {
     window.localStorage.setItem("listofCategory", JSON.stringify(database));
   } else {
     let amountSpent = document.getElementById("amountSpent");
-    console.log("database", database);
     var exist = database.filter((x) => x.category == selectCategory);
-    console.log("exist", exist);
     exist[0].used += JSON.parse(amountSpent.value);
-    console.log(database);
     window.localStorage.setItem("listofCategory", JSON.stringify(database));
   }
 
@@ -129,7 +125,6 @@ const buildHtml = () => {
   {
     buildBudgetData();
   }
-  console.log("listofCategory", listofCategory);
   let totalUsed = 0;
   let totalBudget = 0;
   for (let i = 0; i < listofCategory.length; i++) {
@@ -143,6 +138,8 @@ const buildHtml = () => {
     let spanColor = document.createElement("span");
     let spanPush = document.createElement("span");
     div.classList.add(listofCategory[i].class);
+    div.classList.add('category');
+    div.setAttribute('id', listofCategory[i].class);
     img.src = listofCategory[i].src;
     img.classList.add("icon");
     span.innerHTML = listofCategory[i].category;
@@ -180,6 +177,29 @@ const buildHtml = () => {
     "$" + (totalBudget - totalUsed).toFixed(2);
 
   drawIt();
+
+  /**
+   * Modal hidden until list item is clicked
+   * This needs to be in the buildHtml function because the elements need to be rendered before the document can find them
+   */
+  document.querySelectorAll('.category').forEach((item) => {
+    item.addEventListener('click', function() {
+      const updatedBudget = document.querySelector('#budgetAmount');
+      updatedBudget.value = '';
+      document.querySelector('.dark-overlay').style.display = 'block';
+      editId = item.getAttribute('id');
+      const form = document.querySelector('#editBudgetForm');
+      form.addEventListener('submit', updateBudget);
+    });
+  });
+
+  /**
+   * Cancel button dismisses Modal
+   * This needs to be in the buildHtml function because the elements need to be rendered before the document can find them
+   */
+  document.querySelector('#cancel-new-budget').addEventListener('click', function() {
+    document.querySelector('.dark-overlay').style.display = 'none';
+  });
 };
 
 const buildBudgetData = () => {
@@ -245,6 +265,7 @@ const loadCategory=()=>{
     img.src = listofCategory[i].src;
     img.value=listofCategory[i].category;
     rowdiv.classList.add("row");
+
     let lbl = document.createElement("label");
     lbl.innerHTML=listofCategory[i].category;
     if(listofCategory[i].used<listofCategory[i].budget){
@@ -310,7 +331,6 @@ const pieChart = (options) => {
   canvas.width = 250;
   canvas.height = 250;
 
-  console.log("canvas", canvas.width / 2);
   var total_value = 0;
   var color_index = 0;
   for (var categ in options.data) {
@@ -374,7 +394,6 @@ const drawIt = () => {
       listofCategory[cat].used;
     colorArray.push(listofCategory[cat].color);
   }
-  console.log(colorArray);
 
   pieChart({ 
     canvas: document.getElementById("myCanvas"),
@@ -384,3 +403,38 @@ const drawIt = () => {
     doughnutHoleSize2: 0.4
   });
 };
+
+const updateBudget = () => {
+  const modal = document.querySelector('.dark-overlay');
+  const lineItemBudget = document.querySelector(`#${editId} > .color`);
+  const lineItemSpent = document.querySelector(`#${editId} > .push`);
+  const updatedBudget = document.querySelector('#budgetAmount');
+  const totalElement = document.querySelector('#totalBudgetAvailable');
+  preventDefault();
+  // pull down local storage object
+  const database = JSON.parse(window.localStorage.getItem("listofCategory"));
+  // find the object in the array that has the class that matches the id param
+  const match = database.findIndex(item => item.class === editId);
+  // update object
+  database[match].budget = parseInt(updatedBudget.value, 10);
+  // update line item in html
+  lineItemBudget.innerHTML = `$${parseInt(updatedBudget.value, 10).toFixed(2)}`;
+  // update total in html
+  let total = 0;
+  for (let i = 0; i < database.length; i++) {
+    total += (database[i].budget - database[i].used);
+  }
+  totalElement.innerHTML = `$${parseInt(total, 10).toFixed(2)}`;
+  // change color if necessary
+  if (database[match].budget < database[match].used) {
+    lineItemBudget.style.color = 'red';
+    lineItemSpent.style.color = 'red';
+  } else {
+    lineItemBudget.style.color = '#999';
+    lineItemSpent.style.color = 'gray';
+  }
+  // push local storage back up
+  window.localStorage.setItem("listofCategory", JSON.stringify(database));
+  // close modal
+  modal.style.display = 'none';
+}
