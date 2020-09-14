@@ -30,17 +30,6 @@ const login = (event) => {
   }
 };
 
-// const unfoldMoreCategoriesForm = () => {
-//   event.preventDefault();
-//   addCategoryToBudgetForm.style.display = "inline";
-//   if (
-//     addCategoryToBudgetForm.style.display === "inline" &&
-//     addTransactionForm.style.display === "inline"
-//   ) {
-//     addTransactionForm.style.display = "none";
-//   }
-// };
-
 let newCategory = "";
 const addNewCategory = () => {
   event.preventDefault();
