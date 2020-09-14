@@ -379,9 +379,6 @@ const drawIt = () => {
     colorArray.push(listofCategory[cat].color);
   }
 
-  console.log(amountUsedData);
-  console.log(colorArray);
-
   pieChart({ 
     canvas: document.getElementById("myCanvas"),
     data: amountUsedData,
