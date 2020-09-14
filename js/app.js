@@ -151,6 +151,8 @@ const buildHtml = () => {
     document.querySelector(".groceries-cat").style.marginLeft = "32px";
     document.querySelector(".bills-cat").style.marginLeft = "32px";
     document.querySelector(".entertainment-cat").style.marginLeft = "32px";
+    document.getElementById("pageWrapper").style.paddingBottom = "600px";
+
   } else {
     document.getElementById("donutContainer").style.display = "inline";
     document.getElementById("myCanvas").style.display = "inline";
@@ -365,7 +367,6 @@ const pieChart = (options) => {
   }
 };
 
-
 const drawIt = () => {
   let listofCategory = JSON.parse(
     window.localStorage.getItem("listofCategory")
@@ -377,6 +378,9 @@ const drawIt = () => {
       listofCategory[cat].used;
     colorArray.push(listofCategory[cat].color);
   }
+
+  console.log(amountUsedData);
+  console.log(colorArray);
 
   pieChart({ 
     canvas: document.getElementById("myCanvas"),
